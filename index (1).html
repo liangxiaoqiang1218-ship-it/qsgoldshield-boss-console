@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>强哥老板控制台｜金盾 V100</title>
+  <style>
+    :root{--bg:#0b0f17;--card:#121826;--text:#e9eef7;--muted:#9aa7bd;--ok:#24c26a;--warn:#f6b73c;--line:#263248;--blue:#60a5fa;}
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,"Microsoft YaHei",sans-serif;line-height:1.55}
+    header{padding:30px 34px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,#0b0f17,#121826)}
+    h1{margin:0;font-size:30px} header p{margin:8px 0 0;color:var(--muted)} main{max-width:1180px;margin:0 auto;padding:28px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.two{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px}.card h2{font-size:18px;margin:0 0 12px}.big{font-size:34px;font-weight:800;margin:6px 0}.ok{color:var(--ok)}.warn{color:var(--warn)}.muted{color:var(--muted)}.action{font-size:20px;font-weight:800;background:#1f2937;border-left:5px solid var(--blue);padding:16px;border-radius:12px;margin-top:10px}ul,ol{padding-left:22px}li{margin:8px 0}.table{width:100%;border-collapse:collapse;margin-top:8px}.table th,.table td{border-bottom:1px solid var(--line);padding:10px;text-align:left}.table th{color:#c8d3e5}.footer{color:var(--muted);font-size:13px;margin-top:24px}@media(max-width:900px){.grid,.two{grid-template-columns:1fr}main{padding:16px}}
+  </style>
+</head>
+<body>
+<header>
+  <h1>强哥老板控制台｜金盾 V100</h1>
+  <p>浏览器在线入口。收藏这个页面即可，不用下载压缩包。</p>
+</header>
+<main>
+  <section class="grid">
+    <div class="card"><h2>总状态</h2><div class="big ok">可用</div><div class="muted">V100 封版验收已通过</div></div>
+    <div class="card"><h2>运行验收</h2><div class="big ok">PASS</div><div class="muted">V100 Urgent 成功并生成 artifact</div></div>
+    <div class="card"><h2>交易状态</h2><div class="big warn">未开放</div><div class="muted">当前不是自动交易入口</div></div>
+    <div class="card"><h2>安全边界</h2><div class="big ok">安全</div><div class="muted">不碰密钥、不碰实盘、不改交易逻辑</div></div>
+  </section>
+  <section class="two">
+    <div class="card">
+      <h2>强哥现在能拿它干什么？</h2>
+      <div class="action">一句话：这是金盾项目的老板控制台，不是交易按钮。</div>
+      <ul>
+        <li>打开网页就能知道：金盾 GitHub OS 已经 V100 验收通过。</li>
+        <li>给团队交接时，直接让他们看这个入口，不再翻聊天记录。</li>
+        <li>后续接 MT5 只读、飞书日报、本地 Runner 前，先从这里确认状态。</li>
+        <li>防止团队乱改、乱开版本、乱碰实盘。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>老板结论</h2>
+      <table class="table">
+        <tr><th>项目</th><th>状态</th></tr>
+        <tr><td>仓库验收</td><td class="ok">PASS</td></tr>
+        <tr><td>运行验收</td><td class="ok">PASS</td></tr>
+        <tr><td>V100 锁定</td><td class="ok">PASS</td></tr>
+        <tr><td>Artifact</td><td class="ok">PASS</td></tr>
+        <tr><td>维护态</td><td class="ok">ACTIVE</td></tr>
+      </table>
+    </div>
+  </section>
+  <section class="two">
+    <div class="card">
+      <h2>你现在只需要做什么？</h2>
+      <ol>
+        <li>收藏本页面。</li>
+        <li>以后看项目，先打开本页面。</li>
+        <li>不要继续堆 V101，后面只做维护。</li>
+        <li>下一阶段真正有用的事：接 MT5 只读状态、飞书老板日报、本地 Runner 自动自检。</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>禁止事项</h2>
+      <ul>
+        <li>不要开启实盘交易。</li>
+        <li>不要把密钥写进仓库。</li>
+        <li>不要随便改交易策略。</li>
+        <li>不要继续乱加版本号。</li>
+        <li>不要把工程验收当成赚钱能力。</li>
+      </ul>
+    </div>
+  </section>
+  <section class="card">
+    <h2>下一阶段建议</h2>
+    <div class="action">真正对强哥有用的下一步：接真实状态，而不是继续做静态报告。</div>
+    <ul>
+      <li><b>MT5 只读接入：</b>显示账户、权益、持仓、风险，不允许下单。</li>
+      <li><b>飞书老板日报：</b>每天自动推送“今天是否安全、有没有异常、下一步做什么”。</li>
+      <li><b>Runner 自动自检：</b>每天跑一次 V100 自检，把结果写回报告。</li>
+      <li><b>一页老板屏：</b>只保留“安全/风险/下一步”，不要工程细节。</li>
+    </ul>
+  </section>
+  <div class="footer">说明：本页面只放公开展示信息，不包含交易功能、不连接实盘、不读取密钥、不暴露主仓库代码。</div>
+</main>
+</body>
+</html>
