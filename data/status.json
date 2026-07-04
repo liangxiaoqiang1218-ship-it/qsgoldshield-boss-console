@@ -1,0 +1,20 @@
+{
+  "project": "金盾 V100",
+  "updated_at": "2026-07-04 19:20:22",
+  "overall": "可用",
+  "runtime": "PASS",
+  "trade": "未开放",
+  "safety": "安全",
+  "maintenance": "ACTIVE",
+  "next_focus": [
+    "MT5 只读状态",
+    "飞书老板日报",
+    "Runner 自动自检"
+  ],
+  "warnings": [
+    "不开放实盘交易",
+    "不保存密钥",
+    "不改交易逻辑",
+    "不默认创建 V101"
+  ]
+}

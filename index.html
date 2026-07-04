@@ -4,127 +4,75 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>强哥老板控制台｜金盾 V100</title>
-  <style>
-    :root{
-      --bg:#070b13;--panel:#0f172a;--panel2:#111c33;--panel3:#17243d;--text:#eef5ff;--muted:#9fb0ca;
-      --line:#27354f;--green:#2ee981;--yellow:#ffc857;--red:#ff5c7a;--blue:#6aa6ff;--cyan:#55e6ff;--purple:#a78bfa;
-      --shadow:0 20px 60px rgba(0,0,0,.32);
-    }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 20% 0%,#14213d 0,#070b13 38%,#05070d 100%);color:var(--text);font-family:Arial,"Microsoft YaHei",sans-serif;line-height:1.55}
-    .top{padding:34px 34px 24px;border-bottom:1px solid var(--line);background:linear-gradient(135deg,rgba(96,165,250,.18),rgba(15,23,42,.9) 38%,rgba(7,11,19,.98))}
-    .top-inner{max-width:1220px;margin:auto;display:flex;justify-content:space-between;gap:22px;align-items:flex-start}
-    h1{margin:0;font-size:34px;letter-spacing:.5px}.sub{margin:10px 0 0;color:var(--muted);font-size:15px}.time{color:#bed1ee;font-size:13px;margin-top:8px}.seal{border:1px solid rgba(46,233,129,.45);color:var(--green);padding:10px 14px;border-radius:999px;background:rgba(46,233,129,.08);white-space:nowrap;font-weight:800}
-    main{max-width:1220px;margin:0 auto;padding:26px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-bottom:18px}
-    .card{background:linear-gradient(180deg,rgba(17,28,51,.94),rgba(15,23,42,.94));border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}
-    .card h2{font-size:19px;margin:0 0 14px}.card h3{font-size:16px;margin:0 0 9px}.muted{color:var(--muted)}.ok{color:var(--green)}.warn{color:var(--yellow)}.bad{color:var(--red)}.blue{color:var(--blue)}
-    .big{font-size:42px;font-weight:900;line-height:1.05;margin:4px 0 8px}.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}.kpi .card{min-height:130px}.pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:rgba(255,255,255,.04);border-radius:999px;padding:7px 11px;font-size:13px;color:#dbeafe}.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 16px var(--green)}
-    .faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.faq{background:linear-gradient(180deg,rgba(23,36,61,.92),rgba(15,23,42,.95));border:1px solid var(--line);border-radius:18px;padding:16px;min-height:122px}.faq .q{font-weight:900;font-size:16px;margin-bottom:8px}.faq .a{color:#c7d7ee;font-size:14px}.tag{font-size:12px;color:#07111f;background:var(--green);padding:3px 8px;border-radius:999px;font-weight:900;margin-bottom:10px;display:inline-block}.tag.warn{background:var(--yellow);color:#1a1300}.tag.blue{background:var(--blue);color:#061224}.tag.purple{background:var(--purple);color:#12081f}
-    .section-title{display:flex;align-items:center;justify-content:space-between;margin:28px 0 12px}.section-title h2{margin:0;font-size:22px}.section-title span{color:var(--muted);font-size:13px}
-    .two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}.three{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.action{font-size:19px;font-weight:900;background:linear-gradient(90deg,rgba(96,165,250,.24),rgba(46,233,129,.08));border-left:5px solid var(--blue);padding:16px;border-radius:14px;margin:10px 0 14px}ul,ol{padding-left:22px;margin:8px 0}li{margin:8px 0}.table{width:100%;border-collapse:collapse;margin-top:8px}.table th,.table td{border-bottom:1px solid var(--line);padding:11px;text-align:left}.table th{color:#cfe0f7}.btns{display:flex;flex-wrap:wrap;gap:10px}.btn{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text);padding:10px 13px;border-radius:12px;text-decoration:none;font-weight:800}.btn:hover{background:rgba(96,165,250,.16);border-color:#4f83d6}.footer{color:var(--muted);font-size:13px;margin:26px 0 10px;text-align:center}
-    .mini{font-size:13px;color:var(--muted)}
-    @media(max-width:960px){.top-inner,.hero,.two,.kpi,.faq-grid,.three{grid-template-columns:1fr;display:grid}.seal{white-space:normal}.top{padding:22px 16px}main{padding:16px}h1{font-size:27px}.big{font-size:34px}}
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
       <h1>强哥老板控制台｜金盾 V100</h1>
-      <p class="sub">打开就看结论：能不能用、有没有风险、下一步干什么。这个页面可以直接收藏。</p>
-      <div class="time">状态口径：V100 已验收｜维护态｜静态老板入口</div>
+      <p class="sub">动态多页面版。可以点按钮、搜问题、看二级页面、保存本地确认。</p>
+      <div class="time">数据更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="dot"></span> V100 验收通过</div>
+    <div class="seal">V100 验收通过</div>
   </div>
 </header>
+
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="status.html">状态详情</a>
+      <a href="faq.html">常问问题</a>
+      <a href="next.html">下一步计划</a>
+      <a href="help.html">故障处理</a>
+    </nav>
+    
 <main>
-  <section class="hero">
-    <div class="card">
-      <span class="pill"><span class="dot"></span> 当前总判断</span>
-      <div class="big ok">金盾 OS 可用</div>
-      <p class="muted">这是项目老板控制台，不是交易按钮。它告诉你项目状态、风险边界和下一步，不负责预测黄金涨跌。</p>
-      <div class="btns">
-        <a class="btn" href="#faq">看常问问题</a>
-        <a class="btn" href="#next">看下一步</a>
-        <a class="btn" href="#rules">看禁止事项</a>
-      </div>
-    </div>
-    <div class="card">
-      <h2>今天强哥只看这 4 句话</h2>
-      <ol>
-        <li><b class="ok">验收通过：</b>V100 Urgent 已成功，Artifact 已生成。</li>
-        <li><b class="warn">不能交易：</b>当前没有开放自动下单和实盘执行。</li>
-        <li><b class="ok">安全边界：</b>不碰密钥、不碰实盘、不改交易逻辑。</li>
-        <li><b class="blue">下一步：</b>接真实状态：MT5 只读、飞书日报、Runner 自检。</li>
-      </ol>
-    </div>
-  </section>
+<section class="grid4">
+  <div class="card"><h3>总状态</h3><div class="big ok js-overall">可用</div><div class="mini">老板入口可用</div></div>
+  <div class="card"><h3>运行验收</h3><div class="big ok js-runtime">PASS</div><div class="mini">V100 Urgent 成功</div></div>
+  <div class="card"><h3>交易状态</h3><div class="big warn js-trade">未开放</div><div class="mini">不是自动交易入口</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">安全</div><div class="mini">不碰密钥/实盘/策略</div></div>
+</section>
 
-  <section class="kpi">
-    <div class="card"><h3>总状态</h3><div class="big ok">可用</div><div class="mini">V100 封版验收已通过</div></div>
-    <div class="card"><h3>运行验收</h3><div class="big ok">PASS</div><div class="mini">V100 Urgent 成功</div></div>
-    <div class="card"><h3>交易状态</h3><div class="big warn">未开放</div><div class="mini">不是自动交易入口</div></div>
-    <div class="card"><h3>维护态</h3><div class="big ok">ACTIVE</div><div class="mini">不再默认加 V101</div></div>
-  </section>
+<section class="two">
+  <div class="card">
+    <h2>强哥今天先看这个</h2>
+    <div class="action">一句话：金盾 OS 已通过 V100 验收，但还不是自动交易系统。</div>
+    <ol>
+      <li>能看项目状态和交接结论。</li>
+      <li>不能点网页去下单。</li>
+      <li>下一步接真实状态：MT5 只读、飞书日报、Runner 自检。</li>
+      <li>后续只做维护，不默认加 V101。</li>
+    </ol>
+    <button class="btn" id="confirmBtn">我已看过今天状态</button>
+    <button class="btn" id="refreshBtn">刷新状态</button>
+    <button class="btn" id="copyBtn">复制本页网址</button>
+    <p id="confirmText" class="muted">尚未确认</p>
+  </div>
+  <div class="card">
+    <h2>老板结论</h2>
+    <table class="table">
+      <tr><th>项目</th><th>状态</th></tr>
+      <tr><td>仓库验收</td><td class="ok">PASS</td></tr>
+      <tr><td>运行验收</td><td class="ok js-runtime">PASS</td></tr>
+      <tr><td>V100 锁定</td><td class="ok">PASS</td></tr>
+      <tr><td>Artifact</td><td class="ok">PASS</td></tr>
+      <tr><td>维护态</td><td class="ok js-maintenance">ACTIVE</td></tr>
+    </table>
+  </div>
+</section>
 
-  <div class="section-title" id="faq"><h2>强哥平时最常问的问题</h2><span>放在最上面，打开就能看</span></div>
-  <section class="faq-grid">
-    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾现在能不能用？</div><div class="a">能用作老板控制台和项目验收入口；不能当自动交易系统用。</div></div>
-    <div class="faq"><span class="tag blue">下一步</span><div class="q">我现在该干什么？</div><div class="a">收藏本页；下一步接 MT5 只读、飞书日报、本地 Runner 自动自检。</div></div>
-    <div class="faq"><span class="tag warn">交易</span><div class="q">现在能不能交易？</div><div class="a">不能。当前交易状态未开放，不下单、不实盘、不改策略。</div></div>
-    <div class="faq"><span class="tag">安全</span><div class="q">有没有风险？</div><div class="a">当前公开页只展示结论，不放代码、不放密钥、不放主仓库资料，风险可控。</div></div>
-    <div class="faq"><span class="tag purple">GitHub</span><div class="q">GitHub / Actions 有没有失败？</div><div class="a">主验收链路 V100 Urgent 已通过；旧旁支工作流失败不作为主验收结论。</div></div>
-    <div class="faq"><span class="tag warn">MT5</span><div class="q">MT5 连上了吗？</div><div class="a">这个公开页还没接实时 MT5。下一阶段只接只读状态，不开放下单。</div></div>
-    <div class="faq"><span class="tag blue">飞书</span><div class="q">飞书日报有没有推？</div><div class="a">当前页面是静态入口；下一阶段做老板日报：安全/异常/下一步。</div></div>
-    <div class="faq"><span class="tag purple">Runner</span><div class="q">本地 Runner 有没有自动跑？</div><div class="a">当前已有自检脚本思路；下一阶段把它做成每天自动跑并刷新状态。</div></div>
-    <div class="faq"><span class="tag warn">网页</span><div class="q">网页打不开 / 404 怎么办？</div><div class="a">先确认仓库有 index.html，Pages 选择 main + /root，等 1–3 分钟再刷新。</div></div>
-  </section>
-
-  <div class="section-title"><h2>老板结论</h2><span>只看状态，不看代码</span></div>
-  <section class="two">
-    <div class="card">
-      <h2>强哥现在能拿它干什么？</h2>
-      <div class="action">一句话：这是金盾项目的老板控制台，不是交易按钮。</div>
-      <ul>
-        <li>打开网页就能知道：金盾 GitHub OS 已经 V100 验收通过。</li>
-        <li>给团队交接时，直接让他们看这个入口，不再翻聊天记录。</li>
-        <li>后续接 MT5 只读、飞书日报、本地 Runner 前，先从这里确认状态。</li>
-        <li>防止团队乱改、乱开版本、乱碰实盘。</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>状态表</h2>
-      <table class="table">
-        <tr><th>项目</th><th>状态</th></tr>
-        <tr><td>仓库验收</td><td class="ok">PASS</td></tr>
-        <tr><td>运行验收</td><td class="ok">PASS</td></tr>
-        <tr><td>V100 锁定</td><td class="ok">PASS</td></tr>
-        <tr><td>Artifact</td><td class="ok">PASS</td></tr>
-        <tr><td>维护态</td><td class="ok">ACTIVE</td></tr>
-      </table>
-    </div>
-  </section>
-
-  <div class="section-title" id="next"><h2>下一阶段真正有用的事</h2><span>不要继续做静态报告</span></div>
-  <section class="three">
-    <div class="card"><h2>1｜MT5 只读状态</h2><p class="muted">显示账户、权益、持仓、风险，只读监控，不允许下单。</p></div>
-    <div class="card"><h2>2｜飞书老板日报</h2><p class="muted">每天自动推送：今天是否安全、有没有异常、下一步做什么。</p></div>
-    <div class="card"><h2>3｜Runner 自动自检</h2><p class="muted">每天跑一次自检，把结果写回状态页，避免你手动查。</p></div>
-  </section>
-
-  <div class="section-title" id="rules"><h2>禁止事项</h2><span>这是金盾安全边界</span></div>
-  <section class="card">
-    <ul>
-      <li>不要开启实盘交易。</li>
-      <li>不要把密钥写进仓库。</li>
-      <li>不要随便改交易策略。</li>
-      <li>不要继续乱加版本号。</li>
-      <li>不要把工程验收当成赚钱能力。</li>
-    </ul>
-  </section>
-
-  <div class="footer">说明：本页面只放公开展示信息，不包含交易功能、不连接实盘、不读取密钥、不暴露主仓库代码。</div>
+<section class="card">
+  <h2>强哥最常问的问题</h2>
+  <div class="faq-grid">
+    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾现在能不能用？</div><div class="a">能当老板控制台用，不能当自动交易系统用。</div></div>
+    <div class="faq"><span class="tag blue">下一步</span><div class="q">我现在该干什么？</div><div class="a">收藏本页，然后推进 MT5 只读、飞书日报、Runner 自检。</div></div>
+    <div class="faq"><span class="tag warn">交易</span><div class="q">现在能不能交易？</div><div class="a">不能。当前交易状态未开放，不下单、不实盘。</div></div>
+  </div>
+</section>
+<div class="footer">本页面只展示公开状态，不包含密钥、不连接实盘、不暴露主仓库代码。</div>
 </main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
 </body>
 </html>

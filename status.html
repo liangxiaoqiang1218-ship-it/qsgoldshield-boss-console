@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>状态详情｜金盾 V100</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>状态详情｜金盾 V100</h1>
+      <p class="sub">动态多页面版。可以点按钮、搜问题、看二级页面、保存本地确认。</p>
+      <div class="time">数据更新时间：<span id="updatedAt">读取中</span></div>
+    </div>
+    <div class="seal">V100 验收通过</div>
+  </div>
+</header>
+
+    <nav class="nav">
+      <a href="index.html">首页</a>
+      <a href="status.html">状态详情</a>
+      <a href="faq.html">常问问题</a>
+      <a href="next.html">下一步计划</a>
+      <a href="help.html">故障处理</a>
+    </nav>
+    
+<main>
+<section class="grid4">
+  <div class="card"><h3>总状态</h3><div class="big ok js-overall">可用</div></div>
+  <div class="card"><h3>运行验收</h3><div class="big ok js-runtime">PASS</div></div>
+  <div class="card"><h3>交易状态</h3><div class="big warn js-trade">未开放</div></div>
+  <div class="card"><h3>维护态</h3><div class="big ok js-maintenance">ACTIVE</div></div>
+</section>
+<section class="two">
+  <div class="card">
+    <h2>状态说明</h2>
+    <ul>
+      <li>当前公开页展示的是老板可读状态，不是实时交易终端。</li>
+      <li>运行验收通过，代表 V100 工程验收闭环完成。</li>
+      <li>交易未开放，代表网页不会下单，也不会操作 MT5。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>状态刷新</h2>
+    <p class="muted">当前从 data/status.json 读取。如果后续接 GitHub Actions，可以自动更新这个文件。</p>
+    <button class="btn" id="refreshBtn">重新读取状态</button>
+  </div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
