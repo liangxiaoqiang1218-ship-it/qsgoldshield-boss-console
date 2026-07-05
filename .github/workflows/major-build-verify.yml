@@ -24,6 +24,7 @@ jobs:
           test -f faq.html
           test -f help.html
           test -f runbook.html
+          test -f sample.html
           test -f data/status.json
           test -f data/boss.json
           test -f data/evidence.json
@@ -31,6 +32,7 @@ jobs:
           test -f data/ops.json
           test -f data/execution.json
           test -f data/codex.json
+          test -f data/sample.json
           test -f assets/app.js
           test -f assets/feeds.js
           test -f assets/style.css
