@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-07-05T16:57:03Z",
+  "mode": "read_only_sample",
+  "symbol": "XAUUSD",
+  "account_type": "demo_or_sandbox",
+  "sample_status": "completed",
+  "sample_count": 3,
+  "items": [
+    {"id": "SAMPLE-001", "result": "loss", "r_multiple": -1.0, "note": "historical sample"},
+    {"id": "SAMPLE-002", "result": "win", "r_multiple": 1.3389, "note": "historical sample"},
+    {"id": "SAMPLE-003", "result": "open_review", "r_multiple": null, "note": "pending close review"}
+  ],
+  "summary": {
+    "closed_count": 2,
+    "win_rate": 0.5,
+    "profit_factor": 1.5536,
+    "max_drawdown_usd": 33.6,
+    "safe_public": true
+  },
+  "boundary": "read only data snapshot, no order action"
+}
