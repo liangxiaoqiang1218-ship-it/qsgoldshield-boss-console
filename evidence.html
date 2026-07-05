@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>证据中心</title>
+  <title>证据中心｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,31 +11,49 @@
   <div class="top-inner">
     <div>
       <h1>证据中心</h1>
-      <p class="sub">验收记录、治理规则、交接备案。</p>
+      <p class="sub">老板只看：哪些结果已备案、哪些结论能追溯。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
     <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">首页</a>
+  <a href="index.html">总屏</a>
   <a href="status.html">状态</a>
-  <a href="next.html">下一步</a>
   <a href="evidence.html">证据</a>
   <a href="decision.html">决策</a>
   <a href="ops.html">运维</a>
   <a href="codex.html">Codex</a>
-  <a href="help.html">帮助</a>
 </nav>
 <main>
+<section class="grid4">
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">证据来自公开数据包</div></div>
+  <div class="card"><h3>Workflow</h3><div class="big ok js-workflow">读取中</div><div class="mini">执行状态</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">自动刷新</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读展示</div></div>
+</section>
 <section class="card">
   <h2>最新证据</h2>
   <table class="table">
     <tr><th>事项</th><th>状态</th><th>路径</th></tr>
     <tbody id="evidenceRows">
-      <tr><td>V6.1 patch 验收报告</td><td class="ok">通过</td><td>docs/status/V61_REPORT_20260705.md</td></tr>
+      <tr><td>最终公开同步闭环</td><td class="ok">PASS</td><td>docs/status/FINAL_PUBLIC_SYNC_PASS_20260705.md</td></tr>
     </tbody>
   </table>
+</section>
+<section class="two">
+  <div class="card">
+    <h2>证据口径</h2>
+    <ul>
+      <li>只展示结果、路径和验收状态。</li>
+      <li>不展示密钥、凭证、账户敏感信息。</li>
+      <li>不承载交易执行按钮。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>老板下一步</h2>
+    <div class="action js-next-action">读取中</div>
+  </div>
 </section>
 </main>
 <div id="toast" class="toast"></div>
