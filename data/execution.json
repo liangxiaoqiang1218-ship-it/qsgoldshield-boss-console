@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-05T16:42:00Z",
+  "updated_at": "2026-07-05T16:45:34Z",
   "items": [
     {"task": "执行入口", "status": "已完成", "tone": "ok", "next": "正式入口 execution.html"},
     {"task": "执行数据", "status": "已完成", "tone": "ok", "next": "优先读取 data/execution.json"},
-    {"task": "收口验收", "status": "进行中", "tone": "ok", "next": "确认公开页一致"}
+    {"task": "收尾验收", "status": "已完成", "tone": "ok", "next": "保持只读同步"}
   ]
 }
