@@ -1,21 +1,19 @@
 {
-  "project": "GoldShield Boss Console",
-  "track": "major build",
-  "updated_at": "2026-07-05T12:02:38Z",
+  "updated_at": "2026-07-05T15:57:43Z",
   "items": [
     {
-      "title": "V6.1 patch file-level acceptance",
-      "status": "PASS",
+      "title": "V6.1 patch 验收报告",
+      "status": "通过",
       "path": "docs/status/V61_REPORT_20260705.md"
     },
     {
-      "title": "P0 fast progress rule",
-      "status": "ACTIVE",
+      "title": "P0 快速推进规则",
+      "status": "生效",
       "path": "docs/governance/BOSS_DIRECTIVE_P0_FAST_PROGRESS_20260705.md"
     },
     {
-      "title": "Codex naming rule",
-      "status": "ACTIVE",
+      "title": "Codex 命名规则",
+      "status": "生效",
       "path": "docs/governance/CODEX_NAMING_P0_20260705.md"
     }
   ]
