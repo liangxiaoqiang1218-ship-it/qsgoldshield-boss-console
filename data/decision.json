@@ -1,10 +1,8 @@
 {
-  "updated_at": "2026-07-05T15:57:43Z",
+  "updated_at": "2026-07-05T16:42:00Z",
   "items": [
-    {
-      "title": "公开同步闭环",
-      "recommendation": "先完成只读验收。",
-      "fallback": "保留安全状态种子。"
-    }
+    {"title": "公开同步闭环", "recommendation": "已完成只读验收。", "fallback": "继续只读展示。"},
+    {"title": "执行中心入口", "recommendation": "正式入口已启用。", "fallback": "旧入口仅保留兼容。"},
+    {"title": "V6.1 patch 收尾", "recommendation": "进入收口验收。", "fallback": "不开放交易执行。"}
   ]
 }
