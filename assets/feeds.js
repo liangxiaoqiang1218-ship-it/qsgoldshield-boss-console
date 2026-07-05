@@ -9,7 +9,21 @@ const putRows = (id, rows) => {
   if (el) el.innerHTML = rows.join('');
 };
 
+const putText = (id, value) => {
+  const el = document.getElementById(id);
+  if (el) el.textContent = value ?? '';
+};
+
 const esc = (v) => String(v ?? '').replace(/[&<>"]/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[s]));
+
+async function feedBoss(){
+  if (!document.getElementById('bossCards')) return;
+  try {
+    const data = await readFeed('data/boss.json');
+    putText('bossSummary', data.summary || '');
+    putRows('bossCards', (data.cards || []).map(x => `<a class="card" href="${esc(x.href || '#')}"><h3>${esc(x.name)}</h3><div class="big ok">${esc(x.status)}</div><div class="mini">${esc(x.note || '')}</div></a>`));
+  } catch (e) { console.log(e); }
+}
 
 async function feedEvidence(){
   if (!document.getElementById('evidenceRows')) return;
@@ -46,6 +60,7 @@ async function feedCodex(){
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  feedBoss();
   feedEvidence();
   feedDecision();
   feedOps();
