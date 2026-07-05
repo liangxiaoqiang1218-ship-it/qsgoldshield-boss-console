@@ -18,8 +18,10 @@ jobs:
           test -f index.html
           test -f status.html
           test -f execution.html
+          test -f sample.html
           test -f data/status.json
           test -f data/execution.json
+          test -f data/sample.json
           test -f assets/app.js
           test -f assets/feeds.js
       - name: Check json and boss state
@@ -35,6 +37,7 @@ jobs:
               'data/decision.json',
               'data/ops.json',
               'data/execution.json',
+              'data/sample.json',
           ]
           data = {}
           for name in required:
@@ -53,6 +56,10 @@ jobs:
 
           execution = data['data/execution.json']
           assert execution.get('items')
+
+          sample = data['data/sample.json']
+          assert sample.get('sample_count', 0) >= 0
+          assert sample.get('summary', {}).get('safe_public') is True
           PY
       - name: Check legacy route
         run: |
