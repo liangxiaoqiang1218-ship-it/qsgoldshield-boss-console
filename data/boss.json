@@ -1,0 +1,12 @@
+{
+  "updated_at": "2026-07-05T12:14:17Z",
+  "title": "金盾老板总屏",
+  "summary": "五阶段合并包进行中",
+  "cards": [
+    {"name": "状态中心", "status": "已接入"},
+    {"name": "证据中心", "status": "已接入"},
+    {"name": "决策中心", "status": "已接入"},
+    {"name": "运维中心", "status": "已接入"},
+    {"name": "Codex 执行中心", "status": "已接入"}
+  ]
+}
