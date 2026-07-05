@@ -18,12 +18,17 @@ jobs:
           test -f evidence.html
           test -f decision.html
           test -f ops.html
+          test -f execution.html
           test -f codex.html
+          test -f next.html
+          test -f faq.html
+          test -f help.html
           test -f data/status.json
           test -f data/boss.json
           test -f data/evidence.json
           test -f data/decision.json
           test -f data/ops.json
+          test -f data/execution.json
           test -f data/codex.json
           test -f assets/app.js
           test -f assets/feeds.js
