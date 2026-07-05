@@ -3,59 +3,57 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>状态详情｜金盾 V6.1 patch</title>
+  <title>状态中心｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>状态详情｜金盾 V6.1 patch</h1>
-      <p class="sub">读取 data/status.json，自动判断 fresh / stale / running / failed。</p>
+      <h1>状态中心</h1>
+      <p class="sub">只看同步是否成功、数据是否新鲜、看板是否安全。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
-
 <nav class="nav">
-  <a href="index.html">首页</a>
-  <a href="status.html">状态详情</a>
-  <a href="faq.html">常问问题</a>
-  <a href="next.html">下一步计划</a>
-  <a href="help.html">故障处理</a>
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="codex.html">Codex</a>
 </nav>
-
 <main>
 <section class="grid4">
-  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div></div>
-  <div class="card"><h3>运行验收</h3><div class="big ok js-runtime">读取中</div></div>
-  <div class="card"><h3>交易状态</h3><div class="big warn js-trade">未开放</div></div>
-  <div class="card"><h3>维护态</h3><div class="big ok js-maintenance">ACTIVE</div></div>
+  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div><div class="mini">老板只看能不能用</div></div>
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">主仓到公开看板</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败数：<span class="js-failed-count">0</span>｜运行中：<span class="js-running-count">0</span></div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">超过阈值自动变黄</div></div>
 </section>
-
-<section class="grid3">
-  <div class="card"><h3>同步状态</h3><div class="big ok js-sync">读取中</div><div class="mini">自动同步是否正常</div></div>
-  <div class="card"><h3>Workflow 状态</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败数：<span class="js-failed-count">0</span>｜运行中：<span class="js-running-count">0</span></div></div>
-  <div class="card"><h3>数据年龄</h3><div class="big ok js-freshness">读取中</div><div class="mini">超过 stale 阈值会变黄</div></div>
+<section class="grid4">
+  <div class="card"><h3>运行状态</h3><div class="big ok js-runtime">读取中</div><div class="mini">执行结果</div></div>
+  <div class="card"><h3>维护状态</h3><div class="big ok js-maintenance">读取中</div><div class="mini">看板维护</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读展示</div></div>
+  <div class="card"><h3>交易入口</h3><div class="big ok js-trade">未开放</div><div class="mini">页面不下单</div></div>
 </section>
-
 <section class="two">
   <div class="card">
     <h2>状态说明</h2>
-    <ul>
-      <li>红色：GitHub Actions 或同步流水线失败，优先处理。</li>
-      <li>黄色：数据过期 stale，或 workflow 正在 running / queued。</li>
-      <li>绿色：数据新鲜，没有失败流水线，没有老板待拍板阻塞。</li>
-      <li>交易仍未开放，网页不会下单，也不会操作 MT5。</li>
+    <ul class="js-warnings">
+      <li>公开页只读取安全摘要 JSON。</li>
+      <li>公开文件不保存敏感信息。</li>
+      <li>未开放实盘交易。</li>
+      <li>未改交易策略逻辑。</li>
     </ul>
   </div>
   <div class="card">
-    <h2>状态刷新</h2>
-    <p class="muted">页面每 60 秒自动读取一次，也可以手动点击下面按钮。</p>
+    <h2>立即验收</h2>
+    <p class="muted">页面每 60 秒自动读取一次，也可以手动刷新。</p>
     <button class="btn" id="refreshBtn">立即重新读取状态</button>
     <table class="table">
-      <tr><th>字段</th><th>当前值</th></tr>
+      <tr><th>项目</th><th>当前值</th></tr>
       <tr><td>同步</td><td class="ok js-sync">读取中</td></tr>
       <tr><td>Workflow</td><td class="ok js-workflow">读取中</td></tr>
       <tr><td>下一步</td><td class="js-next-action">读取中</td></tr>
