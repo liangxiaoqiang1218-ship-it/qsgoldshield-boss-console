@@ -1,23 +1,8 @@
 {
-  "updated_at": "2026-07-05T15:57:43Z",
+  "updated_at": "2026-07-05T16:25:12Z",
   "items": [
-    {
-      "task": "五阶段合并包",
-      "status": "进行中",
-      "tone": "ok",
-      "next": "总屏整合"
-    },
-    {
-      "task": "中文老板看板",
-      "status": "进行中",
-      "tone": "ok",
-      "next": "统一页面入口"
-    },
-    {
-      "task": "最终同步闭环",
-      "status": "待配置",
-      "tone": "warn",
-      "next": "等待仓库级配置"
-    }
+    {"task": "执行入口改名", "status": "已完成", "tone": "ok", "next": "前台统一叫执行中心"},
+    {"task": "老板看板可用性", "status": "进行中", "tone": "ok", "next": "继续统一五中心口径"},
+    {"task": "外部执行代理", "status": "已下线", "tone": "warn", "next": "不作为主入口"}
   ]
 }
