@@ -3,43 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>常问问题｜金盾 V100</title>
+  <title>常问问题｜金盾 V6.1 patch</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>常问问题｜金盾 V100</h1>
-      <p class="sub">动态多页面版。可以点按钮、搜问题、看二级页面、保存本地确认。</p>
-      <div class="time">数据更新时间：<span id="updatedAt">读取中</span></div>
+      <h1>常问问题｜金盾 V6.1 patch</h1>
+      <p class="sub">围绕老板最关心的同步、刷新、告警、交易边界做解释。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal">V100 验收通过</div>
+    <div class="seal"><span class="js-release">V6.1 patch</span></div>
   </div>
 </header>
 
-    <nav class="nav">
-      <a href="index.html">首页</a>
-      <a href="status.html">状态详情</a>
-      <a href="faq.html">常问问题</a>
-      <a href="next.html">下一步计划</a>
-      <a href="help.html">故障处理</a>
-    </nav>
-    
+<nav class="nav">
+  <a href="index.html">首页</a>
+  <a href="status.html">状态详情</a>
+  <a href="faq.html">常问问题</a>
+  <a href="next.html">下一步计划</a>
+  <a href="help.html">故障处理</a>
+</nav>
+
 <main>
 <section class="card">
   <h2>常问问题搜索</h2>
-  <input id="faqSearch" class="search" placeholder="输入关键词，比如：交易、MT5、飞书、Runner、404、风险..." />
+  <input id="faqSearch" class="search" placeholder="输入关键词，比如：红色、黄色、stale、running、同步、交易..." />
   <div class="faq-grid">
-    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾现在能不能用？</div><div class="a">能用作老板控制台和项目验收入口；不能当自动交易系统用。</div></div>
-    <div class="faq"><span class="tag blue">下一步</span><div class="q">我现在该干什么？</div><div class="a">收藏本页；下一步接 MT5 只读、飞书日报、本地 Runner 自动自检。</div></div>
-    <div class="faq"><span class="tag warn">交易</span><div class="q">现在能不能交易？</div><div class="a">不能。当前交易状态未开放，不下单、不实盘、不改策略。</div></div>
-    <div class="faq"><span class="tag">安全</span><div class="q">有没有风险？</div><div class="a">当前公开页只展示结论，不放代码、不放密钥、不放主仓库资料。</div></div>
-    <div class="faq"><span class="tag purple">GitHub</span><div class="q">GitHub / Actions 有没有失败？</div><div class="a">主验收链路 V100 Urgent 已通过；旧旁支工作流失败不作为主验收结论。</div></div>
-    <div class="faq"><span class="tag warn">MT5</span><div class="q">MT5 连上了吗？</div><div class="a">这个公开页还没接实时 MT5。下一阶段只接只读状态，不开放下单。</div></div>
-    <div class="faq"><span class="tag blue">飞书</span><div class="q">飞书日报有没有推？</div><div class="a">当前页面是静态入口；下一阶段做老板日报：安全/异常/下一步。</div></div>
-    <div class="faq"><span class="tag purple">Runner</span><div class="q">本地 Runner 有没有自动跑？</div><div class="a">下一阶段把它做成每天自动跑并刷新状态。</div></div>
-    <div class="faq"><span class="tag warn">网页</span><div class="q">网页打不开 / 404 怎么办？</div><div class="a">确认仓库有 index.html，Pages 选择 main + /root，等 1–3 分钟再刷新。</div></div>
+    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾老板总控台现在做什么？</div><div class="a">只做老板管理入口：看状态、看告警、看下一步；不是自动交易系统。</div></div>
+    <div class="faq"><span class="tag blue">刷新</span><div class="q">页面会自动刷新吗？</div><div class="a">会。页面每 60 秒重新读取 data/status.json，不需要手动 F5。</div></div>
+    <div class="faq"><span class="tag warn">stale</span><div class="q">stale 是什么意思？</div><div class="a">状态文件太久没更新。页面会变黄色，提醒先查 GitHub Actions 自动同步有没有停。</div></div>
+    <div class="faq"><span class="tag warn">running</span><div class="q">黄色 running 是什么意思？</div><div class="a">GitHub Actions 正在运行或排队，等流水线结束后页面会自动读新状态。</div></div>
+    <div class="faq"><span class="tag warn">失败</span><div class="q">红色失败是什么意思？</div><div class="a">最近 workflow 或同步流水线失败，优先查 Actions 日志，不要继续加功能。</div></div>
+    <div class="faq"><span class="tag purple">GitHub</span><div class="q">GitHub Actions 自动同步怎么做？</div><div class="a">主仓生成安全摘要 JSON，只把公开字段推送到老板总控台仓库的 data/status.json。</div></div>
+    <div class="faq"><span class="tag warn">交易</span><div class="q">现在能不能交易？</div><div class="a">不能。公开网页不下单、不接 live、不改 lot / SL / TP / 策略参数。</div></div>
+    <div class="faq"><span class="tag">安全</span><div class="q">公开页会不会泄露东西？</div><div class="a">不会放密钥、Token、账号密码、主仓原始日志或机器敏感信息，只放安全摘要。</div></div>
+    <div class="faq"><span class="tag blue">版本</span><div class="q">这是新版本吗？</div><div class="a">不是乱开新版本。主线名称保持 V6.1 patch，只做合并补丁。</div></div>
   </div>
 </section>
 </main>
