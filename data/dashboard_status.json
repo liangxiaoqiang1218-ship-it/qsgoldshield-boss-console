@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-05T21:39:11Z",
+  "generated_at": "2026-07-05T22:34:40Z",
   "dashboard_state": "ONLINE",
   "status_level": "green",
   "status_label": "normal",
-  "status_reason": "V6.1 patch 老板看板同步完成",
+  "status_reason": "minimal stable sync package",
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "open_issue_count": 0,
