@@ -1,1 +1,65 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=./v6/"><title>GoldShield V6.1</title><style>body{font-family:Arial,'Microsoft YaHei',sans-serif;background:#edf2f7;color:#0f172a}.box{width:min(720px,92vw);margin:90px auto;background:#fff;border-radius:24px;padding:30px}</style></head><body><main class="box"><h1>金盾老板总控台 V6.1</h1><p>正在进入真实状态合并版...</p><p><a href="./v6/">打开 V6.1</a></p></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>金盾老板总屏</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>金盾老板总屏</h1>
+      <p class="sub">一屏看状态、证据、决策、运维、Codex。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
+    </div>
+    <div class="seal"><span class="js-release">大版本</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="boss.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="codex.html">Codex</a>
+</nav>
+<main>
+<section class="grid4">
+  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div><div class="mini">老板入口</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">红失败 / 黄运行 / 绿正常</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">安全</div><div class="mini">只读看板</div></div>
+</section>
+<section class="grid3">
+  <a class="card" href="evidence.html"><h3>证据中心</h3><div class="big ok">已接入</div><div class="mini">验收记录 / 规则 / 备案</div></a>
+  <a class="card" href="decision.html"><h3>决策中心</h3><div class="big warn">精简</div><div class="mini">只放老板级事项</div></a>
+  <a class="card" href="ops.html"><h3>运维中心</h3><div class="big ok">已接入</div><div class="mini">同步 / 失败 / 过期</div></a>
+</section>
+<section class="two">
+  <div class="card">
+    <h2>今天先看</h2>
+    <div class="action js-next-action">读取中</div>
+    <ol class="js-next-focus">
+      <li>五阶段已合并成大版本包。</li>
+      <li>中文老板看板继续统一入口。</li>
+      <li>最终同步闭环保持为最后审批项。</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>Codex 执行</h2>
+    <table class="table">
+      <tr><th>任务</th><th>状态</th><th>下一步</th></tr>
+      <tbody id="codexRows">
+        <tr><td>五阶段合并包</td><td class="ok">进行中</td><td>总屏整合</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+<script src="assets/feeds.js"></script>
+</body>
+</html>
