@@ -3,43 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>常问问题｜金盾 V6.1 patch</title>
+  <title>常问问题｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>常问问题｜金盾 V6.1 patch</h1>
-      <p class="sub">围绕老板最关心的同步、刷新、告警、交易边界做解释。</p>
+      <h1>常问问题</h1>
+      <p class="sub">围绕老板最关心的同步、刷新、告警、执行边界做解释。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
-
 <nav class="nav">
-  <a href="index.html">首页</a>
-  <a href="status.html">状态详情</a>
-  <a href="faq.html">常问问题</a>
-  <a href="next.html">下一步计划</a>
-  <a href="help.html">故障处理</a>
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="execution.html">执行</a>
 </nav>
-
 <main>
 <section class="card">
   <h2>常问问题搜索</h2>
-  <input id="faqSearch" class="search" placeholder="输入关键词，比如：红色、黄色、stale、running、同步、交易..." />
+  <input id="faqSearch" class="search" placeholder="输入关键词，比如：红色、黄色、stale、running、同步、执行..." />
   <div class="faq-grid">
-    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾老板总控台现在做什么？</div><div class="a">只做老板管理入口：看状态、看告警、看下一步；不是自动交易系统。</div></div>
+    <div class="faq"><span class="tag">项目状态</span><div class="q">金盾老板看板现在做什么？</div><div class="a">只做老板管理入口：看状态、看告警、看下一步；不是自动交易系统。</div></div>
     <div class="faq"><span class="tag blue">刷新</span><div class="q">页面会自动刷新吗？</div><div class="a">会。页面每 60 秒重新读取 data/status.json，不需要手动 F5。</div></div>
     <div class="faq"><span class="tag warn">stale</span><div class="q">stale 是什么意思？</div><div class="a">状态文件太久没更新。页面会变黄色，提醒先查 GitHub Actions 自动同步有没有停。</div></div>
     <div class="faq"><span class="tag warn">running</span><div class="q">黄色 running 是什么意思？</div><div class="a">GitHub Actions 正在运行或排队，等流水线结束后页面会自动读新状态。</div></div>
     <div class="faq"><span class="tag warn">失败</span><div class="q">红色失败是什么意思？</div><div class="a">最近 workflow 或同步流水线失败，优先查 Actions 日志，不要继续加功能。</div></div>
-    <div class="faq"><span class="tag purple">GitHub</span><div class="q">GitHub Actions 自动同步怎么做？</div><div class="a">主仓生成安全摘要 JSON，只把公开字段推送到老板总控台仓库的 data/status.json。</div></div>
+    <div class="faq"><span class="tag purple">同步</span><div class="q">自动同步怎么做？</div><div class="a">主仓生成安全摘要 JSON，只把公开字段推送到老板看板仓库的数据目录。</div></div>
     <div class="faq"><span class="tag warn">交易</span><div class="q">现在能不能交易？</div><div class="a">不能。公开网页不下单、不接 live、不改 lot / SL / TP / 策略参数。</div></div>
     <div class="faq"><span class="tag">安全</span><div class="q">公开页会不会泄露东西？</div><div class="a">不会放密钥、Token、账号密码、主仓原始日志或机器敏感信息，只放安全摘要。</div></div>
-    <div class="faq"><span class="tag blue">版本</span><div class="q">这是新版本吗？</div><div class="a">不是乱开新版本。主线名称保持 V6.1 patch，只做合并补丁。</div></div>
+    <div class="faq"><span class="tag blue">执行</span><div class="q">执行中心能做真实动作吗？</div><div class="a">不能。执行中心只读展示任务队列，不调用外部代理，也不承载交易执行。</div></div>
   </div>
 </section>
 </main>
