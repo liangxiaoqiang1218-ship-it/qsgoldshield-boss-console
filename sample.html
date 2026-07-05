@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>采样数据｜金盾老板看板</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>采样数据</h1>
+      <p class="sub">只读采样快照，不触发任何交易动作。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
+    </div>
+    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="execution.html">执行</a>
+</nav>
+<main>
+<section class="grid4">
+  <div class="card"><h3>模式</h3><div class="big ok" id="sampleMode">只读</div><div class="mini">不执行交易</div></div>
+  <div class="card"><h3>品种</h3><div class="big" id="sampleSymbol">XAUUSD</div><div class="mini">采样对象</div></div>
+  <div class="card"><h3>样本数</h3><div class="big ok" id="sampleCount">读取中</div><div class="mini">当前快照</div></div>
+  <div class="card"><h3>状态</h3><div class="big ok" id="sampleStatus">读取中</div><div class="mini">采样完成</div></div>
+</section>
+<section class="card">
+  <h2>采样摘要</h2>
+  <table class="table" id="sampleSummary">
+    <tr><th>指标</th><th>值</th></tr>
+  </table>
+</section>
+<section class="card">
+  <h2>样本列表</h2>
+  <table class="table" id="sampleRows">
+    <tr><th>ID</th><th>结果</th><th>R</th><th>备注</th></tr>
+  </table>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+<script>
+(async function(){
+  const res = await fetch('data/sample.json?ts=' + Date.now(), {cache: 'no-store'});
+  const data = await res.json();
+  document.getElementById('sampleMode').textContent = data.mode || 'read_only';
+  document.getElementById('sampleSymbol').textContent = data.symbol || '-';
+  document.getElementById('sampleCount').textContent = data.sample_count ?? '-';
+  document.getElementById('sampleStatus').textContent = data.sample_status || '-';
+  const s = data.summary || {};
+  document.getElementById('sampleSummary').innerHTML += [
+    ['closed_count', s.closed_count],
+    ['win_rate', s.win_rate],
+    ['profit_factor', s.profit_factor],
+    ['max_drawdown_usd', s.max_drawdown_usd],
+    ['safe_public', s.safe_public]
+  ].map(x => `<tr><td>${x[0]}</td><td>${x[1]}</td></tr>`).join('');
+  document.getElementById('sampleRows').innerHTML += (data.items || []).map(x => `<tr><td>${x.id}</td><td>${x.result}</td><td>${x.r_multiple ?? '-'}</td><td>${x.note}</td></tr>`).join('');
+})().catch(console.log);
+</script>
+</body>
+</html>
