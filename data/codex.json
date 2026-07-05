@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-05T16:25:12Z",
+  "updated_at": "2026-07-05T16:42:00Z",
   "items": [
-    {"task": "执行入口改名", "status": "已完成", "tone": "ok", "next": "前台统一叫执行中心"},
-    {"task": "老板看板可用性", "status": "进行中", "tone": "ok", "next": "继续统一五中心口径"},
-    {"task": "外部执行代理", "status": "已下线", "tone": "warn", "next": "不作为主入口"}
+    {"task": "执行入口", "status": "已完成", "tone": "ok", "next": "正式入口 execution.html"},
+    {"task": "执行数据", "status": "已完成", "tone": "ok", "next": "优先读取 data/execution.json"},
+    {"task": "收口验收", "status": "进行中", "tone": "ok", "next": "确认公开页一致"}
   ]
 }
