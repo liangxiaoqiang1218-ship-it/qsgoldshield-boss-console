@@ -1,12 +1,12 @@
 {
-  "updated_at": "2026-07-05T12:14:17Z",
+  "updated_at": "2026-07-05T12:19:35Z",
   "title": "金盾老板总屏",
-  "summary": "五阶段合并包进行中",
+  "summary": "P0-P2 已合并推进：五中心总屏、数据总线、自动生成器、闭环验收一起做。",
   "cards": [
-    {"name": "状态中心", "status": "已接入"},
-    {"name": "证据中心", "status": "已接入"},
-    {"name": "决策中心", "status": "已接入"},
-    {"name": "运维中心", "status": "已接入"},
-    {"name": "Codex 执行中心", "status": "已接入"}
+    {"name": "状态中心", "status": "已接入", "href": "status.html", "note": "同步、运行、新鲜度"},
+    {"name": "证据中心", "status": "已接入", "href": "evidence.html", "note": "验收记录、规则、备案"},
+    {"name": "决策中心", "status": "已接入", "href": "decision.html", "note": "只放老板级事项"},
+    {"name": "运维中心", "status": "已接入", "href": "ops.html", "note": "失败、运行、过期"},
+    {"name": "Codex 执行中心", "status": "已接入", "href": "codex.html", "note": "任务、状态、下一步"}
   ]
 }
