@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>决策中心</title>
+  <title>决策中心｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,30 +11,47 @@
   <div class="top-inner">
     <div>
       <h1>决策中心</h1>
-      <p class="sub">只展示老板级事项。</p>
+      <p class="sub">只展示老板级事项，不放执行按钮。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
     <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">首页</a>
+  <a href="index.html">总屏</a>
   <a href="status.html">状态</a>
-  <a href="next.html">下一步</a>
   <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
   <a href="ops.html">运维</a>
-  <a href="help.html">帮助</a>
+  <a href="codex.html">执行</a>
 </nav>
 <main>
+<section class="grid4">
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">公开数据包</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读审批</div></div>
+  <div class="card"><h3>交易入口</h3><div class="big ok js-trade">未开放</div><div class="mini">页面不下单</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">自动刷新</div></div>
+</section>
 <section class="card">
   <h2>审批事项</h2>
   <table class="table">
-    <tr><th>事项</th><th>建议</th></tr>
-    <tr><td>公开同步闭环</td><td>先完成只读验收。</td></tr>
+    <tr><th>事项</th><th>建议</th><th>兜底</th></tr>
+    <tbody id="decisionRows">
+      <tr><td>公开同步闭环</td><td>已完成只读验收。</td><td>继续只读展示。</td></tr>
+    </tbody>
   </table>
+</section>
+<section class="card">
+  <h2>决策边界</h2>
+  <ul>
+    <li>只展示老板级事项。</li>
+    <li>不展示敏感配置值。</li>
+    <li>不承载交易执行按钮。</li>
+  </ul>
 </section>
 </main>
 <div id="toast" class="toast"></div>
 <script src="assets/app.js"></script>
+<script src="assets/feeds.js"></script>
 </body>
 </html>
