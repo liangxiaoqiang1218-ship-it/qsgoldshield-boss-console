@@ -3,79 +3,63 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>强哥老板控制台｜金盾 V6.1 patch</title>
+  <title>金盾老板总屏</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>强哥老板控制台｜金盾 V6.1 patch</h1>
-      <p class="sub">老板只看结论：同步是否正常、状态是否过期、Actions 是否失败、现在要做什么。</p>
+      <h1>金盾老板总屏</h1>
+      <p class="sub">一屏看状态、证据、决策、运维、Codex。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
-
 <nav class="nav">
-  <a href="index.html">首页</a>
-  <a href="status.html">状态详情</a>
-  <a href="faq.html">常问问题</a>
-  <a href="next.html">下一步计划</a>
-  <a href="help.html">故障处理</a>
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="codex.html">Codex</a>
 </nav>
-
 <main>
 <section class="grid4">
-  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div><div class="mini">老板入口是否可用</div></div>
-  <div class="card"><h3>运行验收</h3><div class="big ok js-runtime">读取中</div><div class="mini">失败红 / running 黄 / 正常绿</div></div>
-  <div class="card"><h3>交易状态</h3><div class="big warn js-trade">未开放</div><div class="mini">网页不是下单入口</div></div>
-  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">安全</div><div class="mini">不碰密钥/实盘/策略</div></div>
+  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div><div class="mini">老板入口</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">红失败 / 黄运行 / 绿正常</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">安全</div><div class="mini">只读看板</div></div>
 </section>
-
 <section class="grid3">
-  <div class="card"><h3>同步状态</h3><div class="big ok js-sync">读取中</div><div class="mini">GitHub Actions 自动同步</div></div>
-  <div class="card"><h3>Workflow</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败数：<span class="js-failed-count">0</span>｜运行中：<span class="js-running-count">0</span></div></div>
-  <div class="card"><h3>数据新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">超过阈值自动 stale 黄色提醒</div></div>
+  <a class="card" href="evidence.html"><h3>证据中心</h3><div class="big ok">已接入</div><div class="mini">验收记录 / 规则 / 备案</div></a>
+  <a class="card" href="decision.html"><h3>决策中心</h3><div class="big warn">精简</div><div class="mini">只放老板级事项</div></a>
+  <a class="card" href="ops.html"><h3>运维中心</h3><div class="big ok">已接入</div><div class="mini">同步 / 失败 / 过期</div></a>
 </section>
-
 <section class="two">
   <div class="card">
-    <h2>强哥今天先看这个</h2>
-    <div class="action js-next-action">读取中...</div>
+    <h2>今天先看</h2>
+    <div class="action js-next-action">读取中</div>
     <ol class="js-next-focus">
-      <li>GitHub Actions 自动同步流水线。</li>
-      <li>页面每 60 秒自动刷新。</li>
-      <li>最后更新时间 + stale 提醒 + 红黄告警。</li>
+      <li>五阶段已合并成大版本包。</li>
+      <li>中文老板看板继续统一入口。</li>
+      <li>最终同步闭环保持为最后审批项。</li>
     </ol>
-    <button class="btn" id="confirmBtn">我已看过今天状态</button>
-    <button class="btn" id="refreshBtn">立即刷新状态</button>
-    <button class="btn" id="copyBtn">复制本页网址</button>
-    <p id="confirmText" class="muted">尚未确认</p>
   </div>
   <div class="card">
-    <h2>老板结论</h2>
+    <h2>Codex 执行</h2>
     <table class="table">
-      <tr><th>项目</th><th>状态</th></tr>
-      <tr><td>仓库验收</td><td class="ok">PASS</td></tr>
-      <tr><td>同步流水线</td><td class="ok js-sync">读取中</td></tr>
-      <tr><td>运行状态</td><td class="ok js-runtime">读取中</td></tr>
-      <tr><td>维护态</td><td class="ok js-maintenance">ACTIVE</td></tr>
-      <tr><td>主线名称</td><td class="ok js-release">V6.1 patch</td></tr>
+      <tr><th>任务</th><th>状态</th><th>下一步</th></tr>
+      <tbody id="codexRows">
+        <tr><td>五阶段合并包</td><td class="ok">进行中</td><td>总屏整合</td></tr>
+      </tbody>
     </table>
   </div>
 </section>
-
-<section class="card">
-  <h2>安全提醒</h2>
-  <ul class="js-warnings">
-    <li>公开页只展示安全摘要，不包含密钥、不连接实盘、不暴露主仓库代码。</li>
-  </ul>
-</section>
-<div class="footer">本页面只展示公开状态，不包含密钥、不连接实盘、不暴露主仓库代码。</div>
 </main>
 <div id="toast" class="toast"></div>
 <script src="assets/app.js"></script>
+<script src="assets/feeds.js"></script>
 </body>
 </html>
