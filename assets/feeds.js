@@ -4,6 +4,18 @@ const readFeed = async (path) => {
   return res.json();
 };
 
+const readFeedFirst = async (paths) => {
+  let lastError = null;
+  for (const path of paths) {
+    try {
+      return await readFeed(path);
+    } catch (e) {
+      lastError = e;
+    }
+  }
+  throw lastError || new Error('feed not found');
+};
+
 const putRows = (id, rows) => {
   const el = document.getElementById(id);
   if (el) el.innerHTML = rows.join('');
@@ -41,20 +53,28 @@ async function feedDecision(){
   } catch (e) { console.log(e); }
 }
 
-function feedOps(){
+async function feedOps(){
   if (!document.getElementById('opsRows')) return;
-  putRows('opsRows', [
-    '<tr><td>失败</td><td class="bad">红色</td><td>先看流水线日志。</td></tr>',
-    '<tr><td>运行中</td><td class="warn">黄色</td><td>等下一次刷新。</td></tr>',
-    '<tr><td>过期</td><td class="warn">黄色</td><td>检查同步计划。</td></tr>',
-    '<tr><td>正常</td><td class="ok">绿色</td><td>继续大版本。</td></tr>'
-  ]);
+  try {
+    const data = await readFeed('data/ops.json');
+    putRows('opsRows', (data.items || []).map(x => {
+      const tone = x.color === '红色' ? 'bad' : x.color === '黄色' ? 'warn' : 'ok';
+      return `<tr><td>${esc(x.signal)}</td><td class="${tone}">${esc(x.color)}</td><td>${esc(x.action)}</td></tr>`;
+    }));
+  } catch (e) {
+    putRows('opsRows', [
+      '<tr><td>失败</td><td class="bad">红色</td><td>先看流水线日志。</td></tr>',
+      '<tr><td>运行中</td><td class="warn">黄色</td><td>等下一次刷新。</td></tr>',
+      '<tr><td>过期</td><td class="warn">黄色</td><td>检查同步计划。</td></tr>',
+      '<tr><td>正常</td><td class="ok">绿色</td><td>继续大版本。</td></tr>'
+    ]);
+  }
 }
 
-async function feedCodex(){
+async function feedExecution(){
   if (!document.getElementById('codexRows')) return;
   try {
-    const data = await readFeed('data/codex.json');
+    const data = await readFeedFirst(['data/execution.json', 'data/codex.json']);
     putRows('codexRows', (data.items || []).map(x => `<tr><td>${esc(x.task)}</td><td class="${esc(x.tone || 'ok')}">${esc(x.status)}</td><td>${esc(x.next)}</td></tr>`));
   } catch (e) { console.log(e); }
 }
@@ -64,5 +84,5 @@ document.addEventListener('DOMContentLoaded', () => {
   feedEvidence();
   feedDecision();
   feedOps();
-  feedCodex();
+  feedExecution();
 });
