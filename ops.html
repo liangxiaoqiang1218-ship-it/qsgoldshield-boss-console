@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ops Center</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Ops Center</h1>
+      <p class="sub">Read-only operations view for status freshness, sync health, and safe fallback.</p>
+      <div class="time">Last updated: <span id="updatedAt">loading</span></div>
+    </div>
+    <div class="seal"><span class="js-release">Major Build</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="status.html">Status</a>
+  <a href="next.html">Next</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="decision.html">Decision</a>
+  <a href="ops.html">Ops</a>
+  <a href="help.html">Help</a>
+</nav>
+<main>
+<section class="grid4">
+  <div class="card"><h3>Sync</h3><div class="big ok js-sync">loading</div><div class="mini">public status feed</div></div>
+  <div class="card"><h3>Workflow</h3><div class="big ok js-workflow">loading</div><div class="mini">failure / running / pass</div></div>
+  <div class="card"><h3>Freshness</h3><div class="big ok js-freshness">loading</div><div class="mini">stale warning threshold</div></div>
+  <div class="card"><h3>Runtime</h3><div class="big ok js-runtime">loading</div><div class="mini">safe dashboard runtime</div></div>
+</section>
+<section class="card">
+  <h2>Ops rules</h2>
+  <table class="table">
+    <tr><th>Signal</th><th>Color</th><th>Action</th></tr>
+    <tr><td>Failure</td><td class="bad">Red</td><td>Check workflow logs first.</td></tr>
+    <tr><td>Running or queued</td><td class="warn">Yellow</td><td>Wait for next status refresh.</td></tr>
+    <tr><td>Stale</td><td class="warn">Yellow</td><td>Check scheduled sync and feed age.</td></tr>
+    <tr><td>Normal</td><td class="ok">Green</td><td>Continue major build.</td></tr>
+  </table>
+</section>
+<section class="card">
+  <h2>Safe fallback</h2>
+  <p class="muted">If final public push configuration is not available, continue artifact-based validation and read-only checks.</p>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
