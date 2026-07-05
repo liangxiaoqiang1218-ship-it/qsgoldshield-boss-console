@@ -3,47 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>下一步计划｜金盾 V6.1 patch</title>
+  <title>下一步｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>下一步计划｜金盾 V6.1 patch</h1>
-      <p class="sub">本轮只做老板总控台管理闭环，不拆新版本、不接交易动作。</p>
+      <h1>下一步</h1>
+      <p class="sub">只看老板下一步：同步、刷新、告警、只读边界。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
-
 <nav class="nav">
-  <a href="index.html">首页</a>
-  <a href="status.html">状态详情</a>
-  <a href="faq.html">常问问题</a>
-  <a href="next.html">下一步计划</a>
-  <a href="help.html">故障处理</a>
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="execution.html">执行</a>
 </nav>
-
 <main>
+<section class="grid4">
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">主仓到公开看板</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">红失败 / 黄运行 / 绿正常</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读展示</div></div>
+</section>
 <section class="card">
-  <h2>V6.1 patch 合并包任务</h2>
-  <div class="action js-next-action">读取中...</div>
-  <div class="todo"><input type="checkbox"><div><b>GitHub Actions 自动同步流水线</b><br><span class="muted">主仓生成安全摘要 JSON，只同步公开字段到老板总控台。</span></div></div>
-  <div class="todo"><input type="checkbox"><div><b>页面 60 秒自动刷新</b><br><span class="muted">浏览器每 60 秒重新读取 data/status.json，不需要手动刷新网页。</span></div></div>
-  <div class="todo"><input type="checkbox"><div><b>最后更新时间</b><br><span class="muted">页面顶部和状态条展示最后更新时间，方便判断数据是否新鲜。</span></div></div>
-  <div class="todo"><input type="checkbox"><div><b>stale 过期提醒</b><br><span class="muted">超过阈值未同步，自动变黄色提醒先查 Actions。</span></div></div>
-  <div class="todo"><input type="checkbox"><div><b>失败红色告警 / running 黄色提醒</b><br><span class="muted">失败优先红色；正在运行或排队显示黄色。</span></div></div>
+  <h2>老板下一步</h2>
+  <div class="action js-next-action">读取中</div>
+  <ol class="js-next-focus">
+    <li>保持公开数据同步。</li>
+    <li>继续老板看板可用性打磨。</li>
+    <li>不开放交易执行。</li>
+  </ol>
 </section>
 <section class="card">
   <h2>安全边界</h2>
   <ul class="js-warnings">
-    <li>不接 MT5 下单。</li>
-    <li>不碰 live。</li>
-    <li>不保存密钥。</li>
-    <li>不改交易策略。</li>
-    <li>主线仍叫 V6.1 patch。</li>
+    <li>公开页只读取安全摘要 JSON。</li>
+    <li>公开文件不保存敏感信息。</li>
+    <li>未开放实盘交易。</li>
+    <li>未改交易策略逻辑。</li>
   </ul>
 </section>
 </main>
