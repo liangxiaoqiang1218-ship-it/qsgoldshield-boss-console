@@ -1,7 +1,11 @@
 {
-  "generated_at": "2026-07-05T15:57:43Z",
+  "generated_at": "2026-07-05T16:42:00Z",
   "dashboard_state": "ONLINE",
   "status_level": "green",
   "status_label": "normal",
-  "status_reason": "safe boss sync completed"
+  "status_reason": "V6.1 patch 收尾合并包已同步",
+  "failed_workflow_count": 0,
+  "running_workflow_count": 0,
+  "open_issue_count": 0,
+  "owner_decision_needed": false
 }
