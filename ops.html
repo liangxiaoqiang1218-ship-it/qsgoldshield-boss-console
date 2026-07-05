@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>运维中心</title>
+  <title>运维中心｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
@@ -11,24 +11,23 @@
   <div class="top-inner">
     <div>
       <h1>运维中心</h1>
-      <p class="sub">只读查看：同步、流水线、数据新鲜度、安全兜底。</p>
+      <p class="sub">只看三件事：失败、运行中、过期。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
     <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">首页</a>
+  <a href="index.html">总屏</a>
   <a href="status.html">状态</a>
-  <a href="next.html">下一步</a>
   <a href="evidence.html">证据</a>
   <a href="decision.html">决策</a>
   <a href="ops.html">运维</a>
-  <a href="help.html">帮助</a>
+  <a href="codex.html">Codex</a>
 </nav>
 <main>
 <section class="grid4">
-  <div class="card"><h3>同步</h3><div class="big ok js-sync">读取中</div><div class="mini">公开状态源</div></div>
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">公开数据包</div></div>
   <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败 / 运行 / 通过</div></div>
   <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
   <div class="card"><h3>运行态</h3><div class="big ok js-runtime">读取中</div><div class="mini">看板运行状态</div></div>
@@ -37,18 +36,32 @@
   <h2>运维规则</h2>
   <table class="table">
     <tr><th>信号</th><th>颜色</th><th>动作</th></tr>
-    <tr><td>失败</td><td class="bad">红色</td><td>先看流水线日志。</td></tr>
-    <tr><td>运行中</td><td class="warn">黄色</td><td>等下一次刷新。</td></tr>
-    <tr><td>过期</td><td class="warn">黄色</td><td>检查同步计划。</td></tr>
-    <tr><td>正常</td><td class="ok">绿色</td><td>继续大版本。</td></tr>
+    <tbody id="opsRows">
+      <tr><td>失败</td><td class="bad">红色</td><td>先看流水线日志。</td></tr>
+      <tr><td>运行中</td><td class="warn">黄色</td><td>等下一次刷新。</td></tr>
+      <tr><td>过期</td><td class="warn">黄色</td><td>检查同步计划。</td></tr>
+      <tr><td>正常</td><td class="ok">绿色</td><td>继续大版本。</td></tr>
+    </tbody>
   </table>
 </section>
-<section class="card">
-  <h2>安全兜底</h2>
-  <p class="muted">公开同步闭环未完成前，继续只读验收和 artifact 交接。</p>
+<section class="two">
+  <div class="card">
+    <h2>运维边界</h2>
+    <ul>
+      <li>只读查看，不执行交易。</li>
+      <li>红色先查 Actions 日志。</li>
+      <li>黄色先等刷新或查同步计划。</li>
+      <li>绿色继续大版本可用性打磨。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>当前下一步</h2>
+    <div class="action js-next-action">读取中</div>
+  </div>
 </section>
 </main>
 <div id="toast" class="toast"></div>
 <script src="assets/app.js"></script>
+<script src="assets/feeds.js"></script>
 </body>
 </html>
