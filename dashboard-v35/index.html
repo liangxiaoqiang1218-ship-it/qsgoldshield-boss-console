@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>金盾老板看板 V3.5</title>
+  <style>
+    body{margin:0;background:#f7f8fb;color:#111827;font-family:Arial,"Microsoft YaHei",sans-serif}
+    .app{width:min(920px,92vw);margin:70px auto;background:#fff;border:1px solid #e6ebf2;border-radius:24px;padding:32px}
+    .tag{color:#64748b;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+    article{background:#fbfcff;border:1px solid #e6ebf2;border-radius:18px;padding:16px}
+    p{color:#64748b;line-height:1.7}
+    button{border:0;background:#111827;color:#fff;border-radius:999px;padding:12px 18px;font-weight:800}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="app">
+    <p class="tag">GoldShield V100 · Dashboard V3.5</p>
+    <h1>金盾老板看板 V3.5</h1>
+    <p id="statusLabel">Loading</p>
+    <p id="statusReason">Loading summary.</p>
+    <section class="grid">
+      <article><p>Version</p><b id="releaseVersion">-</b></article>
+      <article><p>Open</p><b id="openIssueCount">-</b></article>
+      <article><p>Failed</p><b id="failedWorkflowCount">-</b></article>
+    </section>
+    <button id="refreshBtn">Refresh</button>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
