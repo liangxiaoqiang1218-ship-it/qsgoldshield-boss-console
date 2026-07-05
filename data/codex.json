@@ -1,8 +1,23 @@
 {
-  "updated_at": "2026-07-05T16:42:00Z",
+  "updated_at": "2026-07-05T20:20:42Z",
   "items": [
-    {"task": "执行入口", "status": "已完成", "tone": "ok", "next": "正式入口 execution.html"},
-    {"task": "执行数据", "status": "已完成", "tone": "ok", "next": "优先读取 data/execution.json"},
-    {"task": "收口验收", "status": "进行中", "tone": "ok", "next": "确认公开页一致"}
+    {
+      "task": "执行入口迁移",
+      "status": "已完成",
+      "tone": "ok",
+      "next": "正式入口 execution.html"
+    },
+    {
+      "task": "数据源去旧名",
+      "status": "已完成",
+      "tone": "ok",
+      "next": "优先读取 data/execution.json"
+    },
+    {
+      "task": "兼容入口",
+      "status": "保留",
+      "tone": "warn",
+      "next": "仅用于旧链接跳转"
+    }
   ]
 }

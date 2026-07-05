@@ -1,12 +1,37 @@
 {
-  "updated_at": "2026-07-05T16:42:00Z",
+  "updated_at": "2026-07-05T20:20:42Z",
   "title": "金盾老板总屏",
-  "summary": "V6.1 patch 收尾合并完成：公开同步、执行中心、数据源、辅助页、验证清单已统一。",
+  "summary": "执行入口已改为 execution.html：前台统一执行中心，旧地址只做兼容。",
   "cards": [
-    {"name": "状态中心", "status": "已接入", "href": "status.html", "note": "同步、运行、新鲜度"},
-    {"name": "证据中心", "status": "已接入", "href": "evidence.html", "note": "验收记录、规则、备案"},
-    {"name": "决策中心", "status": "已接入", "href": "decision.html", "note": "只放老板级事项"},
-    {"name": "运维中心", "status": "已接入", "href": "ops.html", "note": "失败、运行、过期"},
-    {"name": "执行中心", "status": "已接入", "href": "execution.html", "note": "任务、状态、下一步"}
+    {
+      "name": "状态中心",
+      "status": "已接入",
+      "href": "status.html",
+      "note": "同步、运行、新鲜度"
+    },
+    {
+      "name": "证据中心",
+      "status": "已接入",
+      "href": "evidence.html",
+      "note": "验收记录、规则、备案"
+    },
+    {
+      "name": "决策中心",
+      "status": "已接入",
+      "href": "decision.html",
+      "note": "只放老板级事项"
+    },
+    {
+      "name": "运维中心",
+      "status": "已接入",
+      "href": "ops.html",
+      "note": "失败、运行、过期"
+    },
+    {
+      "name": "执行中心",
+      "status": "已接入",
+      "href": "execution.html",
+      "note": "任务、状态、下一步"
+    }
   ]
 }
