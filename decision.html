@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decision Center</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Decision Center</h1>
+      <p class="sub">Only boss-level decisions are shown here.</p>
+      <div class="time">Last updated: <span id="updatedAt">loading</span></div>
+    </div>
+    <div class="seal"><span class="js-release">Major Build</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="index.html">Home</a>
+  <a href="status.html">Status</a>
+  <a href="next.html">Next</a>
+  <a href="evidence.html">Evidence</a>
+  <a href="decision.html">Decision</a>
+  <a href="help.html">Help</a>
+</nav>
+<main>
+<section class="card">
+  <h2>Boss-level approval</h2>
+  <table class="table">
+    <tr><th>Item</th><th>Recommendation</th><th>Fallback</th></tr>
+    <tr><td>Public sync closure</td><td>Finish read-only and artifact validation first.</td><td>Keep artifact handoff and safe public status seed.</td></tr>
+  </table>
+</section>
+<section class="card">
+  <h2>Hidden from boss</h2>
+  <p class="muted">Routine engineering noise stays with Laomo and Codex. This page only shows final approval items.</p>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
