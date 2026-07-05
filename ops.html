@@ -3,49 +3,49 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ops Center</title>
+  <title>运维中心</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>Ops Center</h1>
-      <p class="sub">Read-only operations view for status freshness, sync health, and safe fallback.</p>
-      <div class="time">Last updated: <span id="updatedAt">loading</span></div>
+      <h1>运维中心</h1>
+      <p class="sub">只读查看：同步、流水线、数据新鲜度、安全兜底。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">Major Build</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="status.html">Status</a>
-  <a href="next.html">Next</a>
-  <a href="evidence.html">Evidence</a>
-  <a href="decision.html">Decision</a>
-  <a href="ops.html">Ops</a>
-  <a href="help.html">Help</a>
+  <a href="index.html">首页</a>
+  <a href="status.html">状态</a>
+  <a href="next.html">下一步</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="help.html">帮助</a>
 </nav>
 <main>
 <section class="grid4">
-  <div class="card"><h3>Sync</h3><div class="big ok js-sync">loading</div><div class="mini">public status feed</div></div>
-  <div class="card"><h3>Workflow</h3><div class="big ok js-workflow">loading</div><div class="mini">failure / running / pass</div></div>
-  <div class="card"><h3>Freshness</h3><div class="big ok js-freshness">loading</div><div class="mini">stale warning threshold</div></div>
-  <div class="card"><h3>Runtime</h3><div class="big ok js-runtime">loading</div><div class="mini">safe dashboard runtime</div></div>
+  <div class="card"><h3>同步</h3><div class="big ok js-sync">读取中</div><div class="mini">公开状态源</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败 / 运行 / 通过</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
+  <div class="card"><h3>运行态</h3><div class="big ok js-runtime">读取中</div><div class="mini">看板运行状态</div></div>
 </section>
 <section class="card">
-  <h2>Ops rules</h2>
+  <h2>运维规则</h2>
   <table class="table">
-    <tr><th>Signal</th><th>Color</th><th>Action</th></tr>
-    <tr><td>Failure</td><td class="bad">Red</td><td>Check workflow logs first.</td></tr>
-    <tr><td>Running or queued</td><td class="warn">Yellow</td><td>Wait for next status refresh.</td></tr>
-    <tr><td>Stale</td><td class="warn">Yellow</td><td>Check scheduled sync and feed age.</td></tr>
-    <tr><td>Normal</td><td class="ok">Green</td><td>Continue major build.</td></tr>
+    <tr><th>信号</th><th>颜色</th><th>动作</th></tr>
+    <tr><td>失败</td><td class="bad">红色</td><td>先看流水线日志。</td></tr>
+    <tr><td>运行中</td><td class="warn">黄色</td><td>等下一次刷新。</td></tr>
+    <tr><td>过期</td><td class="warn">黄色</td><td>检查同步计划。</td></tr>
+    <tr><td>正常</td><td class="ok">绿色</td><td>继续大版本。</td></tr>
   </table>
 </section>
 <section class="card">
-  <h2>Safe fallback</h2>
-  <p class="muted">If final public push configuration is not available, continue artifact-based validation and read-only checks.</p>
+  <h2>安全兜底</h2>
+  <p class="muted">公开同步闭环未完成前，继续只读验收和 artifact 交接。</p>
 </section>
 </main>
 <div id="toast" class="toast"></div>
