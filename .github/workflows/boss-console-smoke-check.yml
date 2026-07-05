@@ -1,0 +1,59 @@
+name: Boss Console Smoke Check
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f index.html
+          test -f status.html
+          test -f execution.html
+          test -f data/status.json
+          test -f data/execution.json
+          test -f assets/app.js
+          test -f assets/feeds.js
+      - name: Check json and boss state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              'data/status.json',
+              'data/dashboard_status.json',
+              'data/boss.json',
+              'data/decision.json',
+              'data/ops.json',
+              'data/execution.json',
+          ]
+          data = {}
+          for name in required:
+              data[name] = json.loads(Path(name).read_text(encoding='utf-8'))
+
+          status = data['data/status.json']
+          assert status.get('sync_status') == 'SYNCED'
+          assert status.get('workflow_state') == 'PASS'
+          assert status.get('status_level') == 'green'
+          assert status.get('auto_refresh_seconds') == 60
+          assert status.get('safe_public') is True
+
+          boss = data['data/boss.json']
+          links = [item.get('href') for item in boss.get('cards', [])]
+          assert 'execution.html' in links
+
+          execution = data['data/execution.json']
+          assert execution.get('items')
+          PY
+      - name: Check legacy route
+        run: |
+          grep -q 'execution.html' codex.html
