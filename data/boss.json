@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-05T16:28:40Z",
+  "updated_at": "2026-07-05T16:42:00Z",
   "title": "金盾老板总屏",
-  "summary": "执行入口已改为 execution.html：前台统一执行中心，旧地址只做兼容。",
+  "summary": "V6.1 patch 收尾合并完成：公开同步、执行中心、数据源、辅助页、验证清单已统一。",
   "cards": [
     {"name": "状态中心", "status": "已接入", "href": "status.html", "note": "同步、运行、新鲜度"},
     {"name": "证据中心", "status": "已接入", "href": "evidence.html", "note": "验收记录、规则、备案"},
