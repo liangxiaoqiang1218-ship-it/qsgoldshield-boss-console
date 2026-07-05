@@ -3,30 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>故障处理｜金盾 V6.1 patch</title>
+  <title>故障处理｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>故障处理｜金盾 V6.1 patch</h1>
-      <p class="sub">按颜色处理：红色先救失败，黄色等运行或查过期，绿色继续推进。</p>
+      <h1>故障处理</h1>
+      <p class="sub">按颜色处理：红色先看日志，黄色等刷新，绿色继续推进。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">V6.1 patch</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
-
 <nav class="nav">
-  <a href="index.html">首页</a>
-  <a href="status.html">状态详情</a>
-  <a href="faq.html">常问问题</a>
-  <a href="next.html">下一步计划</a>
-  <a href="help.html">故障处理</a>
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="execution.html">执行</a>
 </nav>
-
 <main>
+<section class="grid4">
+  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">公开数据包</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">失败 / 运行 / 通过</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期自动提醒</div></div>
+  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读展示</div></div>
+</section>
 <section class="card">
   <h2>故障处理</h2>
   <table class="table">
@@ -34,16 +39,16 @@
     <tr><td>红色失败告警</td><td>先打开 GitHub Actions，查看最新失败 workflow；不要继续加功能。</td></tr>
     <tr><td>黄色 running</td><td>代表 workflow 正在运行或排队，等待结束后页面会在 60 秒刷新中读取新状态。</td></tr>
     <tr><td>黄色 stale</td><td>代表 data/status.json 超过阈值未更新，检查自动同步流水线是否停跑。</td></tr>
-    <tr><td>打开网页 404</td><td>确认 Pages workflow 成功部署，index.html 在仓库根目录，稍等缓存刷新。</td></tr>
-    <tr><td>页面还是旧版</td><td>按 Ctrl + F5 强制刷新，或等 GitHub Pages 缓存更新。</td></tr>
-    <tr><td>状态没变</td><td>确认 data/status.json 已被最新 Actions 同步提交；也可点击“立即刷新状态”。</td></tr>
+    <tr><td>打开网页 404</td><td>确认 Pages 部署成功，稍等缓存刷新。</td></tr>
+    <tr><td>页面还是旧版</td><td>强制刷新浏览器，或等 GitHub Pages 缓存更新。</td></tr>
+    <tr><td>状态没变</td><td>确认 data/status.json 已被最新 Actions 同步提交；也可点击状态页手动刷新。</td></tr>
     <tr><td>想连接 MT5</td><td>只能先做只读状态，不开放下单。</td></tr>
   </table>
 </section>
 <section class="card">
   <h2>安全边界</h2>
   <ul class="js-warnings">
-    <li>不把密钥放进公开仓库。</li>
+    <li>不把敏感信息放进公开仓库。</li>
     <li>不在公开页里放主仓库代码。</li>
     <li>不开放交易按钮。</li>
     <li>不让网页直接控制实盘。</li>
