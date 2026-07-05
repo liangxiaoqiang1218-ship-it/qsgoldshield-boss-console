@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Codex 执行中心</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>Codex 执行中心</h1>
+      <p class="sub">只看编码任务、交付状态、下一步。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
+    </div>
+    <div class="seal"><span class="js-release">大版本</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="index.html">首页</a>
+  <a href="status.html">状态</a>
+  <a href="next.html">下一步</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="codex.html">Codex</a>
+  <a href="help.html">帮助</a>
+</nav>
+<main>
+<section class="card">
+  <h2>执行队列</h2>
+  <table class="table">
+    <tr><th>任务</th><th>状态</th><th>下一步</th></tr>
+    <tbody id="codexRows">
+      <tr><td>五阶段合并包</td><td class="ok">进行中</td><td>接入数据渲染</td></tr>
+    </tbody>
+  </table>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+<script src="assets/feeds.js"></script>
+</body>
+</html>
