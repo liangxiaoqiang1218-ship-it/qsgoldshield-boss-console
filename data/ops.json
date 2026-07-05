@@ -1,0 +1,9 @@
+{
+  "updated_at": "2026-07-05T12:19:35Z",
+  "items": [
+    {"signal": "失败", "color": "红色", "action": "先看流水线日志"},
+    {"signal": "运行中", "color": "黄色", "action": "等下一次刷新"},
+    {"signal": "过期", "color": "黄色", "action": "检查同步计划"},
+    {"signal": "正常", "color": "绿色", "action": "继续大版本"}
+  ]
+}
