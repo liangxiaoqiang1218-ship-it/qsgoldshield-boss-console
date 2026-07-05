@@ -3,39 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Decision Center</title>
+  <title>决策中心</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>Decision Center</h1>
-      <p class="sub">Only boss-level decisions are shown here.</p>
-      <div class="time">Last updated: <span id="updatedAt">loading</span></div>
+      <h1>决策中心</h1>
+      <p class="sub">只展示老板级事项。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
-    <div class="seal"><span class="js-release">Major Build</span></div>
+    <div class="seal"><span class="js-release">大版本</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="status.html">Status</a>
-  <a href="next.html">Next</a>
-  <a href="evidence.html">Evidence</a>
-  <a href="decision.html">Decision</a>
-  <a href="help.html">Help</a>
+  <a href="index.html">首页</a>
+  <a href="status.html">状态</a>
+  <a href="next.html">下一步</a>
+  <a href="evidence.html">证据</a>
+  <a href="ops.html">运维</a>
+  <a href="help.html">帮助</a>
 </nav>
 <main>
 <section class="card">
-  <h2>Boss-level approval</h2>
+  <h2>审批事项</h2>
   <table class="table">
-    <tr><th>Item</th><th>Recommendation</th><th>Fallback</th></tr>
-    <tr><td>Public sync closure</td><td>Finish read-only and artifact validation first.</td><td>Keep artifact handoff and safe public status seed.</td></tr>
+    <tr><th>事项</th><th>建议</th></tr>
+    <tr><td>公开同步闭环</td><td>先完成只读验收。</td></tr>
   </table>
-</section>
-<section class="card">
-  <h2>Hidden from boss</h2>
-  <p class="muted">Routine engineering noise stays with Laomo and Codex. This page only shows final approval items.</p>
 </section>
 </main>
 <div id="toast" class="toast"></div>
