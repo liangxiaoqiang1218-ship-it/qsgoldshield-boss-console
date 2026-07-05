@@ -1,0 +1,30 @@
+name: Major Build Verify
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check major build files
+        run: |
+          test -f index.html
+          test -f boss.html
+          test -f status.html
+          test -f evidence.html
+          test -f decision.html
+          test -f ops.html
+          test -f codex.html
+          test -f data/status.json
+          test -f data/boss.json
+          test -f data/evidence.json
+          test -f data/decision.json
+          test -f data/ops.json
+          test -f data/codex.json
+          test -f assets/app.js
+          test -f assets/feeds.js
+          test -f assets/style.css
