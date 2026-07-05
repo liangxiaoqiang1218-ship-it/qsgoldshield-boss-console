@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "大版本",
-  "updated_at": "2026-07-05T16:45:34Z",
-  "source_updated_at": "2026-07-05T16:45:34Z",
-  "generated_at": "2026-07-05T16:45:34Z",
+  "release_version": "V6.1 patch",
+  "updated_at": "2026-07-05T16:51:12Z",
+  "source_updated_at": "2026-07-05T16:51:12Z",
+  "generated_at": "2026-07-05T16:51:12Z",
   "overall": "可用",
   "runtime": "PASS",
   "trade": "未开放",
@@ -25,17 +25,7 @@
   "running_workflow_count": 0,
   "owner_decision_needed": false,
   "next_action": "收尾完成：保持 10 分钟自动同步与只读老板看板。",
-  "next_focus": [
-    "公开数据已同步",
-    "执行中心正式入口已启用",
-    "data/execution.json 已成为主数据源",
-    "保持只读展示与安全边界"
-  ],
-  "warnings": [
-    "公开页只读取安全摘要 JSON",
-    "公开文件不保存敏感信息",
-    "未开放实盘交易",
-    "未改交易策略逻辑"
-  ],
+  "next_focus": ["公开数据已同步", "执行中心正式入口已启用", "data/execution.json 已成为主数据源", "保持只读展示"],
+  "warnings": ["公开页只读取安全摘要 JSON", "公开文件不保存敏感信息"],
   "safe_public": true
 }
