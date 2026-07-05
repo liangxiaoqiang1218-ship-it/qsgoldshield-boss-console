@@ -23,6 +23,7 @@ jobs:
           test -f next.html
           test -f faq.html
           test -f help.html
+          test -f runbook.html
           test -f data/status.json
           test -f data/boss.json
           test -f data/evidence.json
