@@ -1,0 +1,12 @@
+{
+  "release_version": "V3.4",
+  "generated_at": "2026-07-05T06:24:00Z",
+  "status_level": "green",
+  "status_label": "generated summary ready",
+  "status_reason": "safe preview summary generated for static preview",
+  "freshness_label": "generated",
+  "open_issue_count": 0,
+  "failed_workflow_count": 0,
+  "owner_decision_needed": false,
+  "next_action": "connect static hosting"
+}
