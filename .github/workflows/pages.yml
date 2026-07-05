@@ -34,6 +34,7 @@ jobs:
           test -f next.html
           test -f evidence.html
           test -f decision.html
+          test -f ops.html
           test -f help.html
           test -f data/status.json
           test -f data/evidence.json
