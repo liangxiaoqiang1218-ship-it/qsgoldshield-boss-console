@@ -1,0 +1,22 @@
+{
+  "project": "GoldShield Boss Console",
+  "track": "major build",
+  "updated_at": "2026-07-05T12:02:38Z",
+  "items": [
+    {
+      "title": "V6.1 patch file-level acceptance",
+      "status": "PASS",
+      "path": "docs/status/V61_REPORT_20260705.md"
+    },
+    {
+      "title": "P0 fast progress rule",
+      "status": "ACTIVE",
+      "path": "docs/governance/BOSS_DIRECTIVE_P0_FAST_PROGRESS_20260705.md"
+    },
+    {
+      "title": "Codex naming rule",
+      "status": "ACTIVE",
+      "path": "docs/governance/CODEX_NAMING_P0_20260705.md"
+    }
+  ]
+}
