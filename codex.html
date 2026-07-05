@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>执行中心｜金盾老板看板</title>
+  <meta http-equiv="refresh" content="0; url=execution.html" />
+  <title>执行中心兼容入口｜金盾老板看板</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <header class="top">
   <div class="top-inner">
     <div>
-      <h1>执行中心</h1>
-      <p class="sub">旧执行入口已下线；这里只看任务、状态、下一步。</p>
-      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
+      <h1>执行中心兼容入口</h1>
+      <p class="sub">旧地址已下线，正在跳转到正式执行中心。</p>
+      <div class="time">正式入口：<a href="execution.html">execution.html</a></div>
     </div>
-    <div class="seal"><span class="js-release">大版本</span></div>
+    <div class="seal"><span>兼容</span></div>
   </div>
 </header>
 <nav class="nav">
@@ -23,36 +24,14 @@
   <a href="evidence.html">证据</a>
   <a href="decision.html">决策</a>
   <a href="ops.html">运维</a>
-  <a href="codex.html">执行</a>
+  <a href="execution.html">执行</a>
 </nav>
 <main>
-<section class="grid4">
-  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">公开数据包</div></div>
-  <div class="card"><h3>执行状态</h3><div class="big ok js-workflow">读取中</div><div class="mini">只读任务队列</div></div>
-  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">不承载真实动作</div></div>
-  <div class="card"><h3>交易入口</h3><div class="big ok js-trade">未开放</div><div class="mini">页面不下单</div></div>
-</section>
 <section class="card">
-  <h2>执行队列</h2>
-  <table class="table">
-    <tr><th>任务</th><th>状态</th><th>下一步</th></tr>
-    <tbody id="codexRows">
-      <tr><td>五阶段合并包</td><td class="ok">进行中</td><td>接入数据渲染</td></tr>
-    </tbody>
-  </table>
-</section>
-<section class="card">
-  <h2>执行边界</h2>
-  <ul>
-    <li>只读展示任务队列。</li>
-    <li>不调用外部编码代理。</li>
-    <li>不承载交易执行。</li>
-    <li>文件名保留兼容，前台统一叫执行中心。</li>
-  </ul>
+  <h2>入口已迁移</h2>
+  <p class="muted">老板看板正式执行入口已经迁移到 execution.html。这个页面仅保留旧链接兼容，不承载任务展示。</p>
+  <a class="btn" href="execution.html">进入执行中心</a>
 </section>
 </main>
-<div id="toast" class="toast"></div>
-<script src="assets/app.js"></script>
-<script src="assets/feeds.js"></script>
 </body>
 </html>
