@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>运维手册｜金盾老板看板</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <div>
+      <h1>运维手册</h1>
+      <p class="sub">收口后只看红、黄、绿，不再乱加功能。</p>
+      <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
+    </div>
+    <div class="seal"><span class="js-release">大版本</span></div>
+  </div>
+</header>
+<nav class="nav">
+  <a href="index.html">总屏</a>
+  <a href="status.html">状态</a>
+  <a href="evidence.html">证据</a>
+  <a href="decision.html">决策</a>
+  <a href="ops.html">运维</a>
+  <a href="execution.html">执行</a>
+</nav>
+<main>
+<section class="grid4">
+  <div class="card"><h3>同步</h3><div class="big ok js-sync">读取中</div><div class="mini">公开数据</div></div>
+  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">PASS / RUNNING / FAILED</div></div>
+  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">过期提醒</div></div>
+  <div class="card"><h3>安全</h3><div class="big ok js-safety">读取中</div><div class="mini">只读</div></div>
+</section>
+<section class="card">
+  <h2>收口状态</h2>
+  <table class="table">
+    <tr><th>项目</th><th>状态</th></tr>
+    <tr><td>老板看板</td><td class="ok">收口完成</td></tr>
+    <tr><td>正式执行入口</td><td class="ok">execution.html</td></tr>
+    <tr><td>正式执行数据</td><td class="ok">data/execution.json</td></tr>
+    <tr><td>自动巡检</td><td class="ok">已加入</td></tr>
+  </table>
+</section>
+<section class="card">
+  <h2>处理规则</h2>
+  <table class="table">
+    <tr><th>颜色</th><th>动作</th></tr>
+    <tr><td class="bad">红色</td><td>先查流水线日志。</td></tr>
+    <tr><td class="warn">黄色</td><td>等待刷新，或检查同步是否过期。</td></tr>
+    <tr><td class="ok">绿色</td><td>保持观察，不新增功能。</td></tr>
+  </table>
+</section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
