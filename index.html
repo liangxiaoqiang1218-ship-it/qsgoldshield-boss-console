@@ -3,82 +3,115 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>金盾老板总屏</title>
+  <title>GoldShield Hub｜金盾中枢</title>
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-<header class="top">
+<header class="top hub-top">
   <div class="top-inner">
     <div>
-      <h1>金盾老板总屏</h1>
-      <p class="sub">一句话看同步、看安全、看下一步。</p>
+      <div class="eyebrow">GoldShield Hub</div>
+      <h1>金盾中枢</h1>
+      <p class="sub">10 秒看结论，能推进项目，核心执行保持隔离。</p>
       <div class="time">最后更新时间：<span id="updatedAt">读取中</span></div>
     </div>
     <div class="seal"><span class="js-release">V6.1 patch</span></div>
   </div>
 </header>
 <nav class="nav">
-  <a href="index.html">总屏</a>
-  <a href="status.html">状态</a>
-  <a href="evidence.html">证据</a>
-  <a href="decision.html">决策</a>
-  <a href="ops.html">运维</a>
-  <a href="execution.html">执行</a>
+  <a href="index.html">首页</a>
+  <a href="#samples">样本</a>
+  <a href="#risks">风险</a>
+  <a href="#tasks">任务</a>
+  <a href="#brief">日报</a>
+  <a href="#audit">审计</a>
+  <a href="status.html">旧状态</a>
 </nav>
 <main>
-<section class="grid4">
-  <div class="card"><h3>总状态</h3><div class="big ok js-overall">读取中</div><div class="mini">老板只看能不能用</div></div>
-  <div class="card"><h3>同步闭环</h3><div class="big ok js-sync">读取中</div><div class="mini">主仓到公开看板</div></div>
-  <div class="card"><h3>流水线</h3><div class="big ok js-workflow">读取中</div><div class="mini">PASS / RUNNING / FAILED</div></div>
-  <div class="card"><h3>安全边界</h3><div class="big ok js-safety">读取中</div><div class="mini">只读展示</div></div>
-</section>
-<section class="card">
-  <h2>老板三句话</h2>
-  <div class="action js-next-action">读取中</div>
-  <ol class="js-next-focus">
-    <li>公开数据已同步。</li>
-    <li>老板总屏读取最新数据。</li>
-    <li>保持只读展示与安全边界。</li>
-  </ol>
-</section>
-<section class="grid4">
-  <div class="card"><h3>新鲜度</h3><div class="big ok js-freshness">读取中</div><div class="mini">30 分钟内为新鲜</div></div>
-  <div class="card"><h3>运行状态</h3><div class="big ok js-runtime">读取中</div><div class="mini">执行结果</div></div>
-  <div class="card"><h3>维护状态</h3><div class="big ok js-maintenance">读取中</div><div class="mini">看板维护</div></div>
-  <div class="card"><h3>交易入口</h3><div class="big ok js-trade">未开放</div><div class="mini">页面不下单</div></div>
-</section>
-<section class="card">
-  <h2>V6.1 patch 总览</h2>
-  <div class="action" id="bossSummary">读取中</div>
-</section>
-<section class="grid3" id="bossCards">
-  <a class="card" href="status.html"><h3>状态中心</h3><div class="big ok">已接入</div><div class="mini">运行状态</div></a>
-  <a class="card" href="evidence.html"><h3>证据中心</h3><div class="big ok">已接入</div><div class="mini">验收记录</div></a>
-  <a class="card" href="decision.html"><h3>决策中心</h3><div class="big warn">精简</div><div class="mini">老板级事项</div></a>
-</section>
-<section class="two">
-  <div class="card">
-    <h2>安全提醒</h2>
-    <ul class="js-warnings">
-      <li>公开页只读取安全摘要 JSON。</li>
-      <li>公开文件不保存敏感信息。</li>
-      <li>未开放实盘交易。</li>
-      <li>未改交易策略逻辑。</li>
-    </ul>
-  </div>
-  <div class="card">
-    <h2>执行中心</h2>
-    <table class="table">
-      <tr><th>任务</th><th>状态</th><th>下一步</th></tr>
-      <tbody id="codexRows">
-        <tr><td>五阶段合并包</td><td class="ok">进行中</td><td>总屏整合</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+  <section class="hero-card" id="decisionHero">
+    <div class="hero-left">
+      <div class="status-pill warn" id="hubLight">黄灯</div>
+      <h2 id="hubConclusion">老莫结论读取中</h2>
+      <p id="hubReason">正在读取 GoldShield Hub 数据。</p>
+    </div>
+    <div class="hero-actions">
+      <button class="btn primary" data-hub-action="refresh">刷新状态</button>
+      <button class="btn" data-hub-action="brief">生成老板日报</button>
+      <button class="btn" data-hub-action="decision">查看待拍板</button>
+    </div>
+  </section>
+
+  <section class="grid4 decision-grid">
+    <div class="card"><h3>今日状态</h3><div class="big warn" id="todayStatus">黄灯</div><div class="mini">绿/黄/红，一眼判断</div></div>
+    <div class="card"><h3>是否要强哥拍板</h3><div class="big ok" id="ownerDecision">否</div><div class="mini">只显示真正需要拍板的事</div></div>
+    <div class="card"><h3>最大风险</h3><div class="big warn" id="topRisk">待同步</div><div class="mini">先看最危险的一项</div></div>
+    <div class="card"><h3>下一步</h3><div class="big blue" id="nextStep">同步样本</div><div class="mini">不是口号，是动作</div></div>
+  </section>
+
+  <section class="two" id="samples">
+    <div class="card">
+      <div class="section-title"><h2>样本账本</h2><span class="tag warn" id="sampleFreshness">待同步</span></div>
+      <div class="metric-grid">
+        <div><span>本地样本</span><b id="localSamples">待同步</b></div>
+        <div><span>有效样本</span><b id="validSamples">待核验</b></div>
+        <div><span>候选样本</span><b id="candidateSamples">待核验</b></div>
+        <div><span>污染样本</span><b id="pollutedSamples">待核验</b></div>
+        <div><span>PF</span><b id="pfValue">待重算</b></div>
+        <div><span>胜率</span><b id="winRate">待重算</b></div>
+        <div><span>最大回撤</span><b id="maxDrawdown">待重算</b></div>
+        <div><span>净盈亏</span><b id="netPnl">待重算</b></div>
+      </div>
+      <div class="action" id="sampleConclusion">没有真实样本账本前，中枢不报告最终进度。</div>
+      <button class="btn" data-hub-action="sample-report">生成样本报告</button>
+    </div>
+
+    <div class="card" id="risks">
+      <div class="section-title"><h2>风险与红线</h2><span class="tag warn" id="riskLevel">黄色</span></div>
+      <ul class="risk-list" id="riskList"><li>正在读取风险清单。</li></ul>
+      <button class="btn" data-hub-action="why-yellow">查看黄灯原因</button>
+    </div>
+  </section>
+
+  <section class="two" id="tasks">
+    <div class="card">
+      <div class="section-title"><h2>任务推进池</h2><span class="tag blue">可操作</span></div>
+      <table class="table">
+        <thead><tr><th>任务</th><th>状态</th><th>下一步</th><th>操作</th></tr></thead>
+        <tbody id="taskRows"><tr><td>读取中</td><td>读取中</td><td>读取中</td><td>-</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card" id="brief">
+      <div class="section-title"><h2>老莫日报</h2><span class="tag">一键生成</span></div>
+      <div class="action" id="briefSummary">读取中</div>
+      <ul id="briefItems"><li>读取中</li></ul>
+      <button class="btn primary" data-hub-action="brief">生成今日日报</button>
+      <button class="btn" data-hub-action="handoff">生成交接班卡</button>
+    </div>
+  </section>
+
+  <section class="two" id="audit">
+    <div class="card">
+      <div class="section-title"><h2>操作留痕</h2><span class="tag blue">本浏览器 + 云端日志预留</span></div>
+      <table class="table">
+        <thead><tr><th>时间</th><th>动作</th><th>结果</th></tr></thead>
+        <tbody id="actionRows"><tr><td>读取中</td><td>读取中</td><td>读取中</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>安全锁</h2>
+      <ul class="js-warnings">
+        <li>允许：刷新、生成报告、标记任务、同步样本、归档。</li>
+        <li>核心执行与资金相关动作不在本页面开放。</li>
+        <li>所有高风险动作必须保持隔离与审批。</li>
+      </ul>
+      <div class="action danger-note">GoldShield Hub 管项目，不越过红线。</div>
+    </div>
+  </section>
 </main>
 <div id="toast" class="toast"></div>
 <script src="assets/app.js"></script>
-<script src="assets/feeds.js"></script>
+<script src="assets/hub.js"></script>
 </body>
 </html>
