@@ -1,0 +1,22 @@
+{
+  "updated_at": "2026-07-06T14:40:00Z",
+  "level": "yellow",
+  "label": "黄色",
+  "top_risk": "样本未同步",
+  "items": [
+    {
+      "title": "本地样本账本未接入",
+      "detail": "当前 Hub 只能显示云端状态，不能代表本地真实进度",
+      "suggestion": "先完成 sample.json 对齐",
+      "tone": "warn"
+    },
+    {
+      "title": "页面仍处于 MVP",
+      "detail": "按钮已具备前端交互，云端写入接口仍需后续接入",
+      "suggestion": "先验收首页结构，再接安全后端",
+      "tone": "warn"
+    }
+  ],
+  "owner_decision_needed": false,
+  "safe_public": true
+}
