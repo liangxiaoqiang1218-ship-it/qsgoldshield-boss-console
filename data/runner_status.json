@@ -1,0 +1,8 @@
+{
+  "status": "heartbeat_ok",
+  "safe_public": true,
+  "machine": "self-hosted",
+  "updated_at": "2026-07-06T06:41:02Z",
+  "workflow": "03 Runner Heartbeat",
+  "runner_reached": true
+}
