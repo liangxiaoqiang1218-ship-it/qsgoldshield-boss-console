@@ -1,7 +1,10 @@
 {
-  "updated_at": "2026-07-06T14:40:00Z",
+  "schema": "goldshield.sample.v1",
+  "safe_public": true,
+  "generated_at": "2026-07-06T15:25:00Z",
+  "source": "GoldShield Local Agent seed",
+  "symbol": "XAUUSD",
   "freshness": "待同步",
-  "source": "local evidence not connected yet",
   "metrics": {
     "local_samples": "待同步",
     "valid_samples": "待核验",
@@ -12,7 +15,6 @@
     "max_drawdown": "待重算",
     "net_pnl": "待重算"
   },
-  "conclusion": "本地样本账本未接入前，Hub 不报告最终进度。",
-  "next_action": "接入本地样本导出文件，生成可审计 sample.json。",
-  "safe_public": true
+  "conclusion": "等待本地只读采集器首次同步。",
+  "items": []
 }
