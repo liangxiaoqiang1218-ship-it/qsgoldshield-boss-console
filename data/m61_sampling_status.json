@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-07-06T06:59:30Z",
+  "project": "GoldShield One",
+  "module": "M6.1 sampling reconciliation",
+  "status_color": "yellow",
+  "status": "reconciliation_required",
+  "headline": "当前本地现场证据显示至少 12 笔可见样本，用户估计约 41 笔，最终进度待完整本地历史导出核验。",
+  "counts": {
+    "visible_minimum_from_screenshot": 12,
+    "user_estimated_local_total": 41,
+    "old_historical_registry_count": 11,
+    "strict_closed_loop_source_vintage_count": "2_to_3",
+    "public_dashboard_synced_count": 0
+  },
+  "source_priority_applied": [
+    "local history full export",
+    "local screenshot field evidence",
+    "local reports",
+    "source repo status docs",
+    "public dashboard sync json"
+  ],
+  "current_answer_policy": "Do not report 0 or 11 as the current local sample count. Report at least 12 visible, about 41 pending reconciliation, and wait for full local export for final M6.1 progress.",
+  "next_action": "Rebuild M6.1 sample ledger from complete local history export or complete local report, deduplicate by ticket, then compute valid sample count and X/50 progress.",
+  "safety": {
+    "data_only": true,
+    "account_mutation": false,
+    "strategy_change": false
+  }
+}
