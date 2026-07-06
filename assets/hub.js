@@ -9,6 +9,13 @@ function hubToast(text){
   toast.style.display = 'block';
   setTimeout(function(){ toast.style.display = 'none'; }, 1800);
 }
+function hubLoadCss(){
+  if(document.querySelector('link[href="assets/hub.css"]')) return;
+  var link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.href = 'assets/hub.css';
+  document.head.appendChild(link);
+}
 function hubSetLight(id, level){
   var el = document.getElementById(id);
   if(!el) return;
@@ -66,6 +73,7 @@ function hubBind(){
   });
 }
 document.addEventListener('DOMContentLoaded', function(){
+  hubLoadCss();
   hubBind();
   hubLoad().catch(function(){ hubToast('Hub 数据读取失败'); });
 });
