@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-07-06T06:31:30Z",
+  "project": "GoldShield One",
+  "status": "needs_readonly_reconciliation",
+  "summary": "样本不能再按公开 sample.json 的 0 笔理解。真实口径拆为：本地候选样本 11 笔待复核，仓库 Issue 证据显示 S级 Demo 前向闭环样本 3 笔，公开看板已同步可信样本 0 笔。",
+  "counts": {
+    "local_candidate_samples_reported": 11,
+    "repo_issue_s_grade_closed_samples": 3,
+    "public_synced_verified_samples": 0
+  },
+  "source_notes": {
+    "local_candidate_samples_reported": "来自历史本地口径：本地样本 11 笔，已越过 10 笔门槛，但仍需只读核验、去重、闭环确认。",
+    "repo_issue_s_grade_closed_samples": "来自 qsgoldshield-mt5 Issue #9：S级 Demo 前向闭环样本 3 笔，M4 Gate NOT READY。",
+    "public_synced_verified_samples": "来自 boss-console data/sample.json：sample_count=0，仅表示看板未收到本机验证同步结果，不代表金盾真实样本为 0。"
+  },
+  "latest_repo_issue_metrics": {
+    "m4_gate": "NOT_READY",
+    "s_grade_demo_forward_closed_samples": 3,
+    "net_result_usd": -28.34,
+    "profit_factor": 0.648,
+    "s003_result_usd": -46.94,
+    "s003_outcome": "stop_loss_area"
+  },
+  "next_required_action": "对本地 11 笔候选样本做只读核验：去重、确认真实 MT5 Demo 前向闭环、重新统计胜率/PF/净收益/回撤，然后再写入公开 sample.json。",
+  "boundary": "no trading; no mt5 order action; no live account mutation; sample status only"
+}
