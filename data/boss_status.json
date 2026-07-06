@@ -1,0 +1,44 @@
+{
+  "updated_at": "2026-07-06T06:22:30Z",
+  "project": "GoldShield One",
+  "display_name": "金盾一号老板总状态",
+  "overall": {
+    "color": "yellow",
+    "label": "主线继续，执行机降级观察",
+    "summary": "远程执行机能力已由 05 通道验证成功；00 常驻网关已落库但回写未确认。金盾主线不再被 Runner 运维阻塞。"
+  },
+  "cards": [
+    {
+      "key": "runner",
+      "title": "执行机状态",
+      "color": "yellow",
+      "status": "gateway_pending",
+      "summary": "05 自证通道已验证 GitHub 到本机 Runner 到 PowerShell 7 到 GitHub 回写；00 常驻网关等待回写确认。",
+      "action": "后台观察，不阻塞主线。"
+    },
+    {
+      "key": "sample",
+      "title": "样本状态",
+      "color": "red",
+      "status": "blocked_no_verified_sync",
+      "summary": "公开看板样本仍以未验证同步为准，禁止展示历史假样本或未确认样本。",
+      "action": "下一步做只读样本同步数据源。"
+    },
+    {
+      "key": "safety_lock",
+      "title": "安全锁状态",
+      "color": "green",
+      "status": "locked_safe",
+      "summary": "实盘动作 0，MT5 下单动作 0，自动交易 0，当前只允许只读、诊断、看板、交接班。",
+      "action": "继续保持 live_locked=true / safe_to_trade=false 口径。"
+    }
+  ],
+  "boundaries": {
+    "trading_action": 0,
+    "mt5_order_action": 0,
+    "live_account_mutation": 0,
+    "auto_trading": false,
+    "safe_public": true
+  },
+  "next_step": "落地老板看板三块红黄绿展示，并把样本同步作为下一主线任务。"
+}
