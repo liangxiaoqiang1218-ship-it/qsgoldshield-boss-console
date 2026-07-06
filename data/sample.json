@@ -1,18 +1,18 @@
 {
-  "updated_at": "2026-07-06T01:15:24Z",
-  "mode": "local_runner_not_verified",
-  "source_file": "not_synced",
-  "sample_status": "blocked_no_runner_return",
-  "sample_count": 0,
-  "items": [],
-  "summary": {
-    "sample_count": 0,
-    "closed_count": 0,
-    "win_count": 0,
-    "win_rate": null,
-    "safe_public": true,
-    "runner_reached": false,
-    "expected_local_root": "C:/Users/liang/Documents/Codex/qsgoldshield-mt5"
+  "updated_at": "2026-07-06T14:40:00Z",
+  "freshness": "待同步",
+  "source": "local evidence not connected yet",
+  "metrics": {
+    "local_samples": "待同步",
+    "valid_samples": "待核验",
+    "candidate_samples": "待核验",
+    "polluted_samples": "待核验",
+    "profit_factor": "待重算",
+    "win_rate": "待重算",
+    "max_drawdown": "待重算",
+    "net_pnl": "待重算"
   },
-  "boundary": "local runner sample sync has not returned verified data"
+  "conclusion": "本地样本账本未接入前，Hub 不报告最终进度。",
+  "next_action": "接入本地样本导出文件，生成可审计 sample.json。",
+  "safe_public": true
 }
