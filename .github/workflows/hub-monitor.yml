@@ -1,0 +1,37 @@
+name: GoldShield Hub Monitor
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate Hub files
+        run: |
+          test -f index.html
+          test -f assets/hub.js
+          test -f assets/hub.css
+          test -f data/status.json
+          test -f data/sample.json
+          test -f data/risk.json
+          test -f data/tasks.json
+          test -f data/brief.json
+          test -f data/actions.json
+      - name: Validate JSON
+        run: |
+          python -m json.tool data/status.json >/dev/null
+          python -m json.tool data/sample.json >/dev/null
+          python -m json.tool data/risk.json >/dev/null
+          python -m json.tool data/tasks.json >/dev/null
+          python -m json.tool data/brief.json >/dev/null
+          python -m json.tool data/actions.json >/dev/null
+      - name: Summary
+        run: echo "GoldShield Hub monitor passed"
