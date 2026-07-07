@@ -1,9 +1,10 @@
 {
-  "updated_at": "2026-07-06T14:40:00Z",
+  "updated_at": "2026-07-07T10:51:44Z",
   "items": [
-    {"id":"HUB-P0-001","title":"首页 10 秒决策屏","status":"done","tone":"ok","next":"等待验收"},
-    {"id":"HUB-P0-002","title":"样本账本结构","status":"active","tone":"warn","next":"等待本地数据"},
-    {"id":"HUB-P0-003","title":"风险与任务数据源","status":"done","tone":"ok","next":"前端验收"}
+    {"id":"HUB-P0-001","title":"首页 10 秒决策屏","status":"done","tone":"ok","next":"已接入新数据"},
+    {"id":"HUB-P0-002","title":"样本账本结构","status":"done","tone":"ok","next":"页面展示验收"},
+    {"id":"HUB-P0-003","title":"本地样本 feed","status":"done","tone":"ok","next":"187 样本已同步"},
+    {"id":"HUB-P0-004","title":"自动上传链路","status":"paused","tone":"warn","next":"暂不配 token，先手动验收"}
   ],
   "safe_public": true
 }
