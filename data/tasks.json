@@ -1,10 +1,12 @@
 {
-  "updated_at": "2026-07-07T10:51:44Z",
+  "updated_at": "2026-07-07T11:10:38Z",
   "items": [
     {"id":"HUB-P0-001","title":"首页 10 秒决策屏","status":"done","tone":"ok","next":"已接入新数据"},
-    {"id":"HUB-P0-002","title":"样本账本结构","status":"done","tone":"ok","next":"页面展示验收"},
-    {"id":"HUB-P0-003","title":"本地样本 feed","status":"done","tone":"ok","next":"187 样本已同步"},
-    {"id":"HUB-P0-004","title":"自动上传链路","status":"paused","tone":"warn","next":"暂不配 token，先手动验收"}
+    {"id":"HUB-P0-002","title":"样本账本结构","status":"done","tone":"ok","next":"视觉验收已通过"},
+    {"id":"HUB-P0-003","title":"本地样本 feed","status":"done","tone":"ok","next":"187 样本已同步并显示"},
+    {"id":"HUB-P0-004","title":"Hub 视觉确认","status":"done","tone":"ok","next":"#146 链路通过"},
+    {"id":"HUB-P0-005","title":"自动上传链路","status":"paused","tone":"warn","next":"暂不配 token，避免密钥风险"},
+    {"id":"M0-M4","title":"本地自动值班收口","status":"active","tone":"warn","next":"按 #147 继续推进"}
   ],
   "safe_public": true
 }
