@@ -1,19 +1,25 @@
 {
-  "updated_at": "2026-07-07T10:51:44Z",
+  "updated_at": "2026-07-07T11:10:38Z",
   "level": "yellow",
   "label": "黄色",
-  "top_risk": "前端展示待验收",
+  "top_risk": "M0-M4 本地收口未完成",
   "items": [
     {
-      "title": "样本 feed 已接入",
-      "detail": "Boss Console data/sample.json 已更新为 187 条 XAUUSD 本地只读样本",
-      "suggestion": "打开 Hub 页面确认样本区显示 187、PF 0.897、胜率 18.72、净盈亏 -66.51",
-      "tone": "warn"
+      "title": "Hub 样本展示已通过",
+      "detail": "页面已显示 fresh、187 条本地样本、PF 0.897、胜率 18.72、净盈亏 -66.51",
+      "suggestion": "将 #146 作为已通过链路保留，不关闭，继续推进 #147 M0-M4",
+      "tone": "ok"
     },
     {
       "title": "自动上传未启用",
       "detail": "强哥本地未配置 GitHub token，当前采用手动上传 JSON + 老莫连接器更新 feed",
-      "suggestion": "先完成页面展示验收，再决定是否启用本地自动上传",
+      "suggestion": "暂不启用 token 自动上传，避免密钥风险",
+      "tone": "warn"
+    },
+    {
+      "title": "M0-M4 仍需本地落地",
+      "detail": "Windows Task Scheduler、Watchdog、心跳、只读状态、暂停控制需要本机执行回执",
+      "suggestion": "按最终收口时间统一验收，只在需要强哥配合时通知",
       "tone": "warn"
     }
   ],
