@@ -1,19 +1,19 @@
 {
-  "updated_at": "2026-07-06T14:40:00Z",
+  "updated_at": "2026-07-07T10:51:44Z",
   "level": "yellow",
   "label": "黄色",
-  "top_risk": "样本未同步",
+  "top_risk": "前端展示待验收",
   "items": [
     {
-      "title": "本地样本账本未接入",
-      "detail": "当前 Hub 只能显示云端状态，不能代表本地真实进度",
-      "suggestion": "先完成 sample.json 对齐",
+      "title": "样本 feed 已接入",
+      "detail": "Boss Console data/sample.json 已更新为 187 条 XAUUSD 本地只读样本",
+      "suggestion": "打开 Hub 页面确认样本区显示 187、PF 0.897、胜率 18.72、净盈亏 -66.51",
       "tone": "warn"
     },
     {
-      "title": "页面仍处于 MVP",
-      "detail": "按钮已具备前端交互，云端写入接口仍需后续接入",
-      "suggestion": "先验收首页结构，再接安全后端",
+      "title": "自动上传未启用",
+      "detail": "强哥本地未配置 GitHub token，当前采用手动上传 JSON + 老莫连接器更新 feed",
+      "suggestion": "先完成页面展示验收，再决定是否启用本地自动上传",
       "tone": "warn"
     }
   ],
