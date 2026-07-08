@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch",
-  "updated_at": "2026-07-06T14:40:02Z",
-  "source_updated_at": "2026-07-06T14:40:02Z",
-  "generated_at": "2026-07-06T14:40:02Z",
-  "overall": "可用",
+  "release_version": "V6.1 patch plus GS147 review",
+  "updated_at": "2026-07-08T23:58:29Z",
+  "source_updated_at": "2026-07-08T16:33:00Z",
+  "generated_at": "2026-07-08T23:58:29Z",
+  "overall": "黄灯推进",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,27 +13,28 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "fresh",
-  "status_level": "green",
-  "status_label": "normal",
-  "status_reason": "V6.1 patch 老板看板同步完成",
+  "freshness_label": "review_required",
+  "status_level": "yellow",
+  "status_label": "review_required",
+  "status_reason": "GS147 review result: detail_rows 27, score 55, baseline review required.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
-  "open_issue_count": 0,
+  "open_issue_count": 1,
   "recent_workflow_count": 1,
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "next_action": "收尾完成：保持 10 分钟自动同步与只读老板看板。",
+  "next_action": "Review baseline definition, review sample evidence, update GS147 result summary.",
   "next_focus": [
-    "公开数据已同步",
-    "执行中心正式入口已启用",
-    "data/execution.json 已成为主数据源",
-    "保持只读展示"
+    "baseline review",
+    "sample evidence review",
+    "gate review",
+    "keep dashboard yellow until review is done"
   ],
   "warnings": [
-    "公开页只读取安全摘要 JSON",
-    "公开文件不保存敏感信息"
+    "public page reads safe summary only",
+    "public files contain no sensitive data",
+    "stage promotion is not supported by current review result"
   ],
   "safe_public": true
 }
