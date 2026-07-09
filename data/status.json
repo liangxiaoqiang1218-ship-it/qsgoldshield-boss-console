@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P0 baseline",
-  "updated_at": "2026-07-09T01:26:03Z",
-  "source_updated_at": "2026-07-09T01:26:03Z",
-  "generated_at": "2026-07-09T01:26:03Z",
+  "release_version": "V6.1 patch plus GS147 P0 namespace",
+  "updated_at": "2026-07-09T01:33:25Z",
+  "source_updated_at": "2026-07-09T01:33:25Z",
+  "generated_at": "2026-07-09T01:33:25Z",
   "overall": "黄灯规划",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p0_baseline_truth_planned",
+  "freshness_label": "p0_namespace_guard_planned",
   "status_level": "yellow",
-  "status_label": "p0_baseline_truth_planned",
-  "status_reason": "P0 baseline truth check completed: fallback_known_holdout_188 is not trusted and cannot create new sample count. Baseline truth rules are planned; next is P0 sample namespace guard.",
+  "status_label": "p0_sample_namespace_guard_planned",
+  "status_reason": "P0 sample namespace guard planned: 27 detail_rows stay diagnostic_detail, 188 current_valid_samples stay sample/baseline accounting, and only accepted_new_sample can create new_sample_count.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P0_BASELINE_TRUTH_PLANNED",
-  "next_action": "Plan P0-2 sample namespace guard: separate detail_rows, valid_samples, and accepted_new_sample at field level.",
+  "current_stage": "P0_SAMPLE_NAMESPACE_GUARD_PLANNED",
+  "next_action": "Plan P1 lifecycle quarantine implementation: require paired or quarantined lifecycle rows before any acceptance.",
   "next_focus": [
-    "P0 sample namespace guard",
-    "evidence_role field",
-    "detail_rows separation",
-    "valid_samples guard",
-    "accepted_new_sample only for new_sample_count"
+    "P1 lifecycle quarantine implementation",
+    "lifecycle_pair_status field",
+    "quarantine reason",
+    "no evidence deletion",
+    "paired or quarantined before acceptance"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P0 baseline truth planning does not support promotion",
-    "P0 baseline truth planning does not unlock trading"
+    "P0 namespace guard planning does not support promotion",
+    "P0 namespace guard planning does not unlock trading"
   ],
   "safe_public": true
 }
