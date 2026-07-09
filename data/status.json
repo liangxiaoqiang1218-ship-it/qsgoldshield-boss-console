@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P8 baseline inventory",
-  "updated_at": "2026-07-09T02:31:37Z",
-  "source_updated_at": "2026-07-09T02:31:37Z",
-  "generated_at": "2026-07-09T02:31:37Z",
+  "release_version": "V6.1 patch plus GS147 P9 baseline reconstruction",
+  "updated_at": "2026-07-09T02:33:40Z",
+  "source_updated_at": "2026-07-09T02:33:40Z",
+  "generated_at": "2026-07-09T02:33:40Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p8_baseline_inventory_completed",
+  "freshness_label": "p9_baseline_reconstruction_planned",
   "status_level": "yellow",
-  "status_label": "p8_baseline_inventory_completed",
-  "status_reason": "P8 baseline inventory completed: total_candidates=7, accepted_trusted_baseline_count=0, rejected_candidate_count=7. Fallback 188, post-patch 188 claim, diagnostic rows, shadow score, and incomplete gates are all rejected as trusted baseline. Keep locked.",
+  "status_label": "p9_baseline_reconstruction_planned",
+  "status_reason": "P9 trusted baseline reconstruction planned: rebuild baseline from traceable evidence, explicit window, reproducible row count, and source map; do not trust fallback 188 or summary counts. No accepted baseline yet, no promotion or trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P8_BASELINE_INVENTORY_COMPLETED",
-  "next_action": "P9 trusted baseline reconstruction implementation planning: build traceable baseline reconstruction plan without trusting fallback 188.",
+  "current_stage": "P9_BASELINE_RECONSTRUCTION_PLANNED",
+  "next_action": "P10 trusted baseline source map and reconstruction manifest implementation.",
   "next_focus": [
-    "baseline reconstruction plan",
-    "traceable source evidence",
+    "source map implementation",
+    "reconstruction manifest",
+    "traceable row evidence",
     "explicit baseline window",
-    "reproducible sample count",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P8 baseline inventory does not support promotion",
-    "P8 baseline inventory does not unlock trading"
+    "P9 baseline reconstruction planning does not support promotion",
+    "P9 baseline reconstruction planning does not unlock trading"
   ],
   "safe_public": true
 }
