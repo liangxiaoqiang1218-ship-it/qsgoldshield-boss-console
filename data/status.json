@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P0 namespace",
-  "updated_at": "2026-07-09T01:33:25Z",
-  "source_updated_at": "2026-07-09T01:33:25Z",
-  "generated_at": "2026-07-09T01:33:25Z",
+  "release_version": "V6.1 patch plus GS147 P1 lifecycle quarantine",
+  "updated_at": "2026-07-09T01:44:50Z",
+  "source_updated_at": "2026-07-09T01:44:50Z",
+  "generated_at": "2026-07-09T01:44:50Z",
   "overall": "黄灯规划",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p0_namespace_guard_planned",
+  "freshness_label": "p1_lifecycle_quarantine_planned",
   "status_level": "yellow",
-  "status_label": "p0_sample_namespace_guard_planned",
-  "status_reason": "P0 sample namespace guard planned: 27 detail_rows stay diagnostic_detail, 188 current_valid_samples stay sample/baseline accounting, and only accepted_new_sample can create new_sample_count.",
+  "status_label": "p1_lifecycle_quarantine_planned",
+  "status_reason": "P1 lifecycle quarantine planned: lifecycle rows must be paired or quarantined with reason before any accepted evidence chain use. Quarantined rows cannot change baseline, accepted_new_sample, new_sample_count, promotion readiness, or trading state.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P0_SAMPLE_NAMESPACE_GUARD_PLANNED",
-  "next_action": "Plan P1 lifecycle quarantine implementation: require paired or quarantined lifecycle rows before any acceptance.",
+  "current_stage": "P1_LIFECYCLE_QUARANTINE_PLANNED",
+  "next_action": "Plan P2 accepted evidence chain gate: enforce trusted baseline + sample namespace + paired lifecycle before acceptance.",
   "next_focus": [
-    "P1 lifecycle quarantine implementation",
-    "lifecycle_pair_status field",
-    "quarantine reason",
-    "no evidence deletion",
-    "paired or quarantined before acceptance"
+    "P2 accepted evidence chain gate",
+    "trusted baseline requirement",
+    "accepted_new_sample gate",
+    "lifecycle paired-only entry",
+    "quarantine exclusion from promotion"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P0 namespace guard planning does not support promotion",
-    "P0 namespace guard planning does not unlock trading"
+    "P1 lifecycle quarantine planning does not support promotion",
+    "P1 lifecycle quarantine planning does not unlock trading"
   ],
   "safe_public": true
 }
