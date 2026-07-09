@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 M5 stamped",
-  "updated_at": "2026-07-09T01:06:25Z",
-  "source_updated_at": "2026-07-09T01:06:25Z",
-  "generated_at": "2026-07-09T01:06:25Z",
-  "overall": "黄灯已收口",
+  "release_version": "V6.1 patch plus GS147 C prep",
+  "updated_at": "2026-07-09T01:08:14Z",
+  "source_updated_at": "2026-07-09T01:08:14Z",
+  "generated_at": "2026-07-09T01:08:14Z",
+  "overall": "黄灯准备",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "m5_closed",
+  "freshness_label": "c_pack_prep_started",
   "status_level": "yellow",
-  "status_label": "m5_closed_yellow",
-  "status_reason": "M5 close stamped: evidence review completed, gate attribution completed, keep locked and prepare C-pack M7-M9.",
+  "status_label": "c_pack_prep_started",
+  "status_reason": "C-pack M7-M9 preparation started after M5 closed yellow. Next action is M7 truth audit readonly.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,18 +24,21 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "next_action": "Prepare C-pack M7-M9: truth audit, evidence/rule correction plan, readonly forward validation.",
+  "current_package": "C",
+  "current_stage": "C_PREP",
+  "next_action": "Run M7 truth audit readonly: rebuild trusted evidence chain for baseline, sample truth, lifecycle, PF and net PnL inputs.",
   "next_focus": [
-    "C-pack M7-M9 prep",
     "M7 truth audit",
-    "M8 evidence and rule correction plan",
-    "M9 readonly forward validation"
+    "trusted baseline reconstruction",
+    "sample truth audit",
+    "lifecycle evidence audit",
+    "performance evidence audit"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
     "stage promotion is not supported by current review result",
-    "shadow score 55 is readonly evidence score only and must not unlock trading"
+    "C-pack preparation does not unlock trading"
   ],
   "safe_public": true
 }
