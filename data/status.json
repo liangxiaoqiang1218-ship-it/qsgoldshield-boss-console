@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P9 baseline reconstruction",
-  "updated_at": "2026-07-09T02:33:40Z",
-  "source_updated_at": "2026-07-09T02:33:40Z",
-  "generated_at": "2026-07-09T02:33:40Z",
+  "release_version": "V6.1 patch plus GS147 P10 source map",
+  "updated_at": "2026-07-09T02:42:03Z",
+  "source_updated_at": "2026-07-09T02:42:03Z",
+  "generated_at": "2026-07-09T02:42:03Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p9_baseline_reconstruction_planned",
+  "freshness_label": "p10_source_map_completed",
   "status_level": "yellow",
-  "status_label": "p9_baseline_reconstruction_planned",
-  "status_reason": "P9 trusted baseline reconstruction planned: rebuild baseline from traceable evidence, explicit window, reproducible row count, and source map; do not trust fallback 188 or summary counts. No accepted baseline yet, no promotion or trading unlock.",
+  "status_label": "p10_source_map_completed",
+  "status_reason": "P10 source map and first reconstruction manifest completed: source_files_mapped=10, row_level_trace_sources=0, accepted_trusted_baseline_count=0. Baseline remains missing; row-level trace is required. No promotion or trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P9_BASELINE_RECONSTRUCTION_PLANNED",
-  "next_action": "P10 trusted baseline source map and reconstruction manifest implementation.",
+  "current_stage": "P10_SOURCE_MAP_COMPLETED",
+  "next_action": "P11 readonly local row-level trace discovery task planning.",
   "next_focus": [
-    "source map implementation",
-    "reconstruction manifest",
-    "traceable row evidence",
-    "explicit baseline window",
+    "row-level trace discovery",
+    "local readonly source path",
+    "signal_evidence_history jsonl",
+    "lifecycle feed",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P9 baseline reconstruction planning does not support promotion",
-    "P9 baseline reconstruction planning does not unlock trading"
+    "P10 source map does not support promotion",
+    "P10 source map does not unlock trading"
   ],
   "safe_public": true
 }
