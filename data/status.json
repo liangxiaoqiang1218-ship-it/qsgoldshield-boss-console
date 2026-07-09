@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 C prep",
-  "updated_at": "2026-07-09T01:08:14Z",
-  "source_updated_at": "2026-07-09T01:08:14Z",
-  "generated_at": "2026-07-09T01:08:14Z",
-  "overall": "黄灯准备",
+  "release_version": "V6.1 patch plus GS147 C M7",
+  "updated_at": "2026-07-09T01:13:06Z",
+  "source_updated_at": "2026-07-09T01:13:06Z",
+  "generated_at": "2026-07-09T01:13:06Z",
+  "overall": "黄灯推进",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "c_pack_prep_started",
+  "freshness_label": "m7_done",
   "status_level": "yellow",
-  "status_label": "c_pack_prep_started",
-  "status_reason": "C-pack M7-M9 preparation started after M5 closed yellow. Next action is M7 truth audit readonly.",
+  "status_label": "m7_truth_audit_done",
+  "status_reason": "M7 truth audit completed: partial trusted evidence only; baseline/new-sample acceptance is not trusted. Keep locked and move to M8 correction plan.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -25,20 +25,21 @@
   "running_workflow_count": 0,
   "owner_decision_needed": false,
   "current_package": "C",
-  "current_stage": "C_PREP",
-  "next_action": "Run M7 truth audit readonly: rebuild trusted evidence chain for baseline, sample truth, lifecycle, PF and net PnL inputs.",
+  "current_stage": "M8_PREP",
+  "next_action": "Run M8 evidence and rule correction plan readonly: fix baseline truth, sample acceptance, lifecycle quarantine, performance acceptance, and gate attribution output.",
   "next_focus": [
-    "M7 truth audit",
-    "trusted baseline reconstruction",
-    "sample truth audit",
-    "lifecycle evidence audit",
-    "performance evidence audit"
+    "M8 evidence and rule correction plan",
+    "baseline truth correction",
+    "sample acceptance separation",
+    "lifecycle quarantine plan",
+    "performance acceptance review",
+    "gate attribution output"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
     "stage promotion is not supported by current review result",
-    "C-pack preparation does not unlock trading"
+    "M7 truth audit does not unlock trading"
   ],
   "safe_public": true
 }
