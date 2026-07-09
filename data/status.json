@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P6 secondary reasons result",
-  "updated_at": "2026-07-09T02:26:47Z",
-  "source_updated_at": "2026-07-09T02:25:56Z",
-  "generated_at": "2026-07-09T02:26:47Z",
+  "release_version": "V6.1 patch plus GS147 P7 trusted baseline package",
+  "updated_at": "2026-07-09T02:29:06Z",
+  "source_updated_at": "2026-07-09T02:29:06Z",
+  "generated_at": "2026-07-09T02:29:06Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p6_secondary_reasons_completed",
+  "freshness_label": "p7_trusted_baseline_package_planned",
   "status_level": "yellow",
-  "status_label": "p6_secondary_reasons_completed",
-  "status_reason": "P6 secondary reasons completed: validator_completed_readonly v1.1.1, accepted_chain_count=0, rejected_chain_count=4, primary rejected_baseline_not_trusted=4, secondary rejection matrix generated. No new sample count delta, no promotion, no trading unlock.",
+  "status_label": "p7_trusted_baseline_package_planned",
+  "status_reason": "P7 trusted baseline work package planned: define accepted trusted baseline, reject fallback_known_holdout_188, keep current_valid_samples=188 separate from accepted_new_sample, and keep accepted_chain_count=0 until baseline is accepted. No promotion or trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,21 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P6_SECONDARY_REASONS_COMPLETED",
-  "next_action": "P7 validator secondary reason result review and trusted baseline work-package planning.",
+  "current_stage": "P7_TRUSTED_BASELINE_PACKAGE_PLANNED",
+  "next_action": "P8 trusted baseline inventory implementation: create readonly baseline inventory JSON/Markdown.",
   "next_focus": [
-    "trusted baseline work package",
-    "secondary rejection reason review",
-    "lifecycle pairing feed",
+    "trusted baseline inventory",
+    "baseline acceptance rules",
+    "fallback baseline rejection",
     "accepted chain remains zero",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P6 secondary reasons do not support promotion",
-    "P6 secondary reasons do not unlock trading",
-    "generated plain_language_strategy_version in validator output has mojibake; use the separate copyable strategy document as source of truth"
+    "P7 trusted baseline package does not support promotion",
+    "P7 trusted baseline package does not unlock trading"
   ],
   "safe_public": true
 }
