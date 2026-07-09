@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 C M9",
-  "updated_at": "2026-07-09T01:18:51Z",
-  "source_updated_at": "2026-07-09T01:18:51Z",
-  "generated_at": "2026-07-09T01:18:51Z",
-  "overall": "黄灯验证完成",
+  "release_version": "V6.1 patch plus GS147 C closed",
+  "updated_at": "2026-07-09T01:20:16Z",
+  "source_updated_at": "2026-07-09T01:20:16Z",
+  "generated_at": "2026-07-09T01:20:16Z",
+  "overall": "黄灯已收口",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "m9_validated_keep_locked",
+  "freshness_label": "c_pack_closed_yellow",
   "status_level": "yellow",
-  "status_label": "m9_validated_keep_locked",
-  "status_reason": "M9 readonly validation completed: M8 rules are valid as a plan, but current evidence does not pass promotion. Keep locked and prepare C-pack close summary/backlog.",
+  "status_label": "c_pack_closed_yellow",
+  "status_reason": "C-pack M7-M9 closed yellow: truth audit, correction plan, and readonly validation completed; promotion not allowed; implementation backlog is ready.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -25,21 +25,20 @@
   "running_workflow_count": 0,
   "owner_decision_needed": false,
   "current_package": "C",
-  "current_stage": "C_PACK_CLOSE_PREP",
-  "next_action": "Prepare C-pack close summary and implementation backlog: baseline truth, lifecycle quarantine, performance acceptance flags, row-level gate attribution.",
+  "current_stage": "IMPLEMENTATION_BACKLOG_READY",
+  "next_action": "Plan readonly implementation backlog: P0 baseline truth reconstruction, P0 sample namespace guard, P1 lifecycle quarantine, P1 performance acceptance flags, P1 row-level gate attribution.",
   "next_focus": [
-    "C-pack close summary",
-    "implementation backlog",
-    "baseline truth reconstruction",
-    "lifecycle quarantine implementation",
-    "performance acceptance flags",
-    "row-level gate attribution"
+    "P0 baseline truth reconstruction",
+    "P0 sample namespace guard",
+    "P1 lifecycle quarantine implementation",
+    "P1 performance acceptance flags",
+    "P1 row-level gate attribution"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "M9 validation does not support promotion",
-    "M9 validation does not unlock trading"
+    "C-pack close does not support promotion",
+    "C-pack close does not unlock trading"
   ],
   "safe_public": true
 }
