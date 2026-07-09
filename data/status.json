@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P12 row trace discovery result",
-  "updated_at": "2026-07-09T02:55:22Z",
-  "source_updated_at": "2026-07-09T02:51:36Z",
-  "generated_at": "2026-07-09T02:55:22Z",
+  "release_version": "V6.1 patch plus GS147 P13 manifest seed",
+  "updated_at": "2026-07-09T02:56:39Z",
+  "source_updated_at": "2026-07-09T02:56:39Z",
+  "generated_at": "2026-07-09T02:56:39Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p12_row_trace_discovery_completed",
+  "freshness_label": "p13_manifest_seed_planned",
   "status_level": "yellow",
-  "status_label": "p12_row_trace_discovery_completed",
-  "status_reason": "P12 row-level trace discovery completed: candidate_file_count=35, row_level_trace_candidate_count=19. Best candidates include signal_evidence_history.jsonl, signal_evidence_batch_items.jsonl, lifecycle_pairing_acceptance_gate_report.json, lifecycle_quarantine_candidates.json, and sample registry files. No promotion or trading unlock.",
+  "status_label": "p13_manifest_seed_planned",
+  "status_reason": "P13 trusted baseline candidate manifest seed completed: ranked 19 row-level trace candidates from P12, selected signal_evidence_history.jsonl and signal_evidence_batch_items.jsonl as first files for P14 safe structural inspection. No baseline accepted, no promotion or trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,21 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P12_ROW_TRACE_DISCOVERY_COMPLETED",
-  "next_action": "P13 trusted baseline candidate manifest planning from safe row-level trace candidates.",
+  "current_stage": "P13_MANIFEST_SEED_PLANNED",
+  "next_action": "P14 safe row-structure inspection for signal_evidence_history.jsonl and signal_evidence_batch_items.jsonl.",
   "next_focus": [
     "signal_evidence_history.jsonl",
     "signal_evidence_batch_items.jsonl",
-    "lifecycle pairing acceptance gate",
-    "trusted baseline manifest",
+    "safe structural inspection",
+    "baseline candidate manifest draft",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P12 discovery does not support promotion",
-    "P12 discovery does not unlock trading",
-    "row-level trace candidates require P13 manifest review before any baseline acceptance"
+    "P13 manifest seed does not accept trusted baseline",
+    "P13 manifest seed does not unlock trading"
   ],
   "safe_public": true
 }
