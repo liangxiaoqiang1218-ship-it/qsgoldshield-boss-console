@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 C closed",
-  "updated_at": "2026-07-09T01:20:16Z",
-  "source_updated_at": "2026-07-09T01:20:16Z",
-  "generated_at": "2026-07-09T01:20:16Z",
-  "overall": "黄灯已收口",
+  "release_version": "V6.1 patch plus GS147 P0 baseline",
+  "updated_at": "2026-07-09T01:26:03Z",
+  "source_updated_at": "2026-07-09T01:26:03Z",
+  "generated_at": "2026-07-09T01:26:03Z",
+  "overall": "黄灯规划",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "c_pack_closed_yellow",
+  "freshness_label": "p0_baseline_truth_planned",
   "status_level": "yellow",
-  "status_label": "c_pack_closed_yellow",
-  "status_reason": "C-pack M7-M9 closed yellow: truth audit, correction plan, and readonly validation completed; promotion not allowed; implementation backlog is ready.",
+  "status_label": "p0_baseline_truth_planned",
+  "status_reason": "P0 baseline truth check completed: fallback_known_holdout_188 is not trusted and cannot create new sample count. Baseline truth rules are planned; next is P0 sample namespace guard.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,21 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_package": "C",
-  "current_stage": "IMPLEMENTATION_BACKLOG_READY",
-  "next_action": "Plan readonly implementation backlog: P0 baseline truth reconstruction, P0 sample namespace guard, P1 lifecycle quarantine, P1 performance acceptance flags, P1 row-level gate attribution.",
+  "current_stage": "P0_BASELINE_TRUTH_PLANNED",
+  "next_action": "Plan P0-2 sample namespace guard: separate detail_rows, valid_samples, and accepted_new_sample at field level.",
   "next_focus": [
-    "P0 baseline truth reconstruction",
     "P0 sample namespace guard",
-    "P1 lifecycle quarantine implementation",
-    "P1 performance acceptance flags",
-    "P1 row-level gate attribution"
+    "evidence_role field",
+    "detail_rows separation",
+    "valid_samples guard",
+    "accepted_new_sample only for new_sample_count"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "C-pack close does not support promotion",
-    "C-pack close does not unlock trading"
+    "P0 baseline truth planning does not support promotion",
+    "P0 baseline truth planning does not unlock trading"
   ],
   "safe_public": true
 }
