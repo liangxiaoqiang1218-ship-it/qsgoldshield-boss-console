@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P2 accepted evidence chain gate",
-  "updated_at": "2026-07-09T01:48:30Z",
-  "source_updated_at": "2026-07-09T01:48:30Z",
-  "generated_at": "2026-07-09T01:48:30Z",
+  "release_version": "V6.1 patch plus GS147 P3 readonly validator",
+  "updated_at": "2026-07-09T01:53:40Z",
+  "source_updated_at": "2026-07-09T01:53:40Z",
+  "generated_at": "2026-07-09T01:53:40Z",
   "overall": "黄灯规划",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p2_accepted_evidence_chain_gate_planned",
+  "freshness_label": "p3_readonly_validator_planned",
   "status_level": "yellow",
-  "status_label": "p2_accepted_evidence_chain_gate_planned",
-  "status_reason": "P2 accepted evidence chain gate planned: accepted evidence now requires trusted baseline, valid sample namespace, paired lifecycle, no quarantine, complete source trace, and readonly validation pass. Planning does not promote, trade, or unlock.",
+  "status_label": "p3_readonly_validator_planned",
+  "status_reason": "P3 readonly validator implementation planned: validator must emit accepted_chain_status and accepted_chain_rejection_reason for every candidate, preserve source trace, keep new_sample_count_delta at 0 unless trusted baseline plus accepted_new_sample exists, and never unlock trading.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P2_ACCEPTED_EVIDENCE_CHAIN_GATE_PLANNED",
-  "next_action": "Plan P3 readonly validator implementation: produce accepted_chain_status and rejection reasons without touching trading.",
+  "current_stage": "P3_READONLY_VALIDATOR_PLANNED",
+  "next_action": "Plan P4 readonly validator code implementation: implement the validator script and generate result JSON/Markdown under readonly boundary.",
   "next_focus": [
-    "P3 readonly validator implementation",
-    "accepted_chain_status output",
-    "accepted_chain_rejection_reason output",
-    "source trace preservation",
-    "no trading unlock"
+    "P4 readonly validator code implementation",
+    "validator script",
+    "result JSON and Markdown",
+    "rejection reason matrix",
+    "desktop completion notification"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P2 accepted evidence chain gate planning does not support promotion",
-    "P2 accepted evidence chain gate planning does not unlock trading"
+    "P3 readonly validator planning does not support promotion",
+    "P3 readonly validator planning does not unlock trading"
   ],
   "safe_public": true
 }
