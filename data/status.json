@@ -2,9 +2,9 @@
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
   "release_version": "V6.1 patch plus GS147 M5 review",
-  "updated_at": "2026-07-09T00:36:00Z",
-  "source_updated_at": "2026-07-08T16:33:00Z",
-  "generated_at": "2026-07-09T00:36:00Z",
+  "updated_at": "2026-07-09T00:44:34Z",
+  "source_updated_at": "2026-07-09T00:44:34Z",
+  "generated_at": "2026-07-09T00:44:34Z",
   "overall": "黄灯推进",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "freshness_warning",
+  "freshness_label": "review_current",
   "status_level": "yellow",
-  "status_label": "m5_sample_evidence_review_done_with_warning",
-  "status_reason": "M5-2 sample evidence review: detail_rows and valid_samples are separated; warning: shadow score snapshot used 25 rows while latest review has 27 rows.",
+  "status_label": "m5_shadow_score_27_rows_refreshed",
+  "status_reason": "M5-2.5 shadow score refreshed to 27 detail rows; score remains 55; continue to M5-3 gate review.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,17 +24,17 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "next_action": "Rerun readonly shadow score on the latest 27 detail rows, then continue to M5-3 gate review.",
+  "next_action": "Run M5-3 gate review: explain why 26 signal candidates are blocked by strategy_validation_gate.",
   "next_focus": [
-    "refresh shadow score on 27 detail rows",
-    "then run M5-3 gate review",
+    "M5-3 gate review",
+    "strategy_validation_gate block reason review",
     "keep dashboard yellow until M5 review is complete"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
     "stage promotion is not supported by current review result",
-    "shadow score freshness warning: 25-row score versus 27-row latest detail review"
+    "shadow score 55 is readonly evidence score only and must not unlock trading"
   ],
   "safe_public": true
 }
