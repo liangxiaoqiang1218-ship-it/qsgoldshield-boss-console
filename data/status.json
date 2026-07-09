@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 P4 readonly validator result",
-  "updated_at": "2026-07-09T02:07:38Z",
-  "source_updated_at": "2026-07-09T02:02:01Z",
-  "generated_at": "2026-07-09T02:07:38Z",
+  "release_version": "V6.1 patch plus GS147 P5 hardening strategy",
+  "updated_at": "2026-07-09T02:09:01Z",
+  "source_updated_at": "2026-07-09T02:09:01Z",
+  "generated_at": "2026-07-09T02:09:01Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "p4_readonly_validator_completed",
+  "freshness_label": "p5_validator_hardening_planned",
   "status_level": "yellow",
-  "status_label": "p4_readonly_validator_completed",
-  "status_reason": "P4 readonly validator completed: validator_completed_readonly, accepted_chain_count=0, rejected_chain_count=4, all rejected because baseline is not trusted. No new sample count delta, no promotion, no trading unlock.",
+  "status_label": "p5_validator_hardening_planned",
+  "status_reason": "P5 hardening planned: preserve primary rejection order, add secondary rejection reasons and hardening advice, keep accepted_chain_count=0 until trusted baseline exists. Plain-language copyable strategy has been written.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 0,
   "owner_decision_needed": false,
-  "current_stage": "P4_READONLY_VALIDATOR_COMPLETED",
-  "next_action": "Plan P5 validator result review and hardening: secondary rejection visibility and baseline-trust dependency hardening.",
+  "current_stage": "P5_VALIDATOR_HARDENING_PLANNED",
+  "next_action": "P6 implement secondary_rejection_reasons and hardening_advice in readonly validator output.",
   "next_focus": [
-    "P5 validator result review",
-    "secondary rejection visibility",
-    "baseline trust dependency",
-    "accepted chain remains zero",
+    "secondary rejection reasons",
+    "per-candidate hardening advice",
+    "plain-language strategy",
+    "trusted baseline dependency",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "P4 readonly validator result does not support promotion",
-    "P4 readonly validator result does not unlock trading"
+    "P5 hardening planning does not support promotion",
+    "P5 hardening planning does not unlock trading"
   ],
   "safe_public": true
 }
