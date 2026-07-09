@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 combined source-trace/blocker fix",
-  "updated_at": "2026-07-09T03:50:21Z",
-  "source_updated_at": "2026-07-09T03:50:21Z",
-  "generated_at": "2026-07-09T03:50:21Z",
+  "release_version": "V6.1 patch plus GS147 blocker remediation plan",
+  "updated_at": "2026-07-09T04:01:03Z",
+  "source_updated_at": "2026-07-09T04:01:03Z",
+  "generated_at": "2026-07-09T04:01:03Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCING",
   "dashboard_state": "ONLINE",
-  "freshness_label": "combined_source_trace_blocker_fix_triggered",
+  "freshness_label": "blocker_remediation_plan_triggered",
   "status_level": "yellow",
-  "status_label": "combined_source_trace_blocker_fix_triggered",
-  "status_reason": "Combined fix V1.7.0 triggered: repair source trace parse regression, then re-run structured positive holdout and lifecycle blocker review. This is readonly only; no baseline shortcut acceptance, no Demo entry, no trading unlock.",
+  "status_label": "blocker_remediation_plan_triggered",
+  "status_reason": "V1.7.0 fixed the source trace parse regression and narrowed blockers to positive holdout and lifecycle gate. V1.8.0 now generates a readonly remediation plan and ordered repair sequence for trusted baseline refresh, strategy/patch/sample gates, and lifecycle PF/PnL/new-sample blockers. No Demo entry and no trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 1,
   "owner_decision_needed": false,
-  "current_stage": "COMBINED_SOURCE_TRACE_BLOCKER_FIX_TRIGGERED",
-  "next_action": "Read V1.7.0 runner result: source_trace_parse_regression_fixed, positive_holdout_fix_required, lifecycle_fix_required.",
+  "current_stage": "BLOCKER_REMEDIATION_PLAN_TRIGGERED",
+  "next_action": "Read V1.8.0 runner result and execute the first safe repair step from the generated order.",
   "next_focus": [
-    "source trace parse regression",
-    "positive holdout primary evidence",
-    "lifecycle remaining blockers",
-    "Demo still blocked until validator passes",
+    "trusted baseline primary refresh",
+    "strategy patch validation gate",
+    "sample collector gate",
+    "lifecycle PF/PnL/new sample blockers",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
-    "combined fix does not print raw rows",
-    "combined fix does not enter Demo",
-    "combined fix does not unlock trading"
+    "remediation plan does not print raw rows",
+    "remediation plan does not enter Demo",
+    "remediation plan does not unlock trading"
   ],
   "safe_public": true
 }
