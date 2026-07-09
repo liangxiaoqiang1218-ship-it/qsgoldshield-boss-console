@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 blocker remediation plan",
-  "updated_at": "2026-07-09T04:01:03Z",
-  "source_updated_at": "2026-07-09T04:01:03Z",
-  "generated_at": "2026-07-09T04:01:03Z",
+  "release_version": "V6.1 patch plus GS147 blocker remediation plan retrigger",
+  "updated_at": "2026-07-09T04:08:39Z",
+  "source_updated_at": "2026-07-09T04:08:39Z",
+  "generated_at": "2026-07-09T04:08:39Z",
   "overall": "黄灯只读",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCING",
   "dashboard_state": "ONLINE",
-  "freshness_label": "blocker_remediation_plan_triggered",
+  "freshness_label": "blocker_remediation_plan_retriggered",
   "status_level": "yellow",
-  "status_label": "blocker_remediation_plan_triggered",
-  "status_reason": "V1.7.0 fixed the source trace parse regression and narrowed blockers to positive holdout and lifecycle gate. V1.8.0 now generates a readonly remediation plan and ordered repair sequence for trusted baseline refresh, strategy/patch/sample gates, and lifecycle PF/PnL/new-sample blockers. No Demo entry and no trading unlock.",
+  "status_label": "blocker_remediation_plan_retriggered",
+  "status_reason": "V1.8.0 result had not yet overwritten latest_result, which still showed V1.7.0. Retiggering the readonly V1.8.0 remediation plan with a fresh nonce. No Demo entry and no trading unlock.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -24,20 +24,20 @@
   "failed_workflow_count": 0,
   "running_workflow_count": 1,
   "owner_decision_needed": false,
-  "current_stage": "BLOCKER_REMEDIATION_PLAN_TRIGGERED",
-  "next_action": "Read V1.8.0 runner result and execute the first safe repair step from the generated order.",
+  "current_stage": "BLOCKER_REMEDIATION_PLAN_RETRIGGERED",
+  "next_action": "Read latest_result.md after the V1.8.0 retrigger and execute the first safe repair step from the generated order.",
   "next_focus": [
+    "V1.8.0 runner freshness",
     "trusted baseline primary refresh",
-    "strategy patch validation gate",
-    "sample collector gate",
+    "strategy/patch/sample gate clearing",
     "lifecycle PF/PnL/new sample blockers",
     "keep locked"
   ],
   "warnings": [
     "public page reads safe summary only",
-    "remediation plan does not print raw rows",
-    "remediation plan does not enter Demo",
-    "remediation plan does not unlock trading"
+    "retrigger does not print raw rows",
+    "retrigger does not enter Demo",
+    "retrigger does not unlock trading"
   ],
   "safe_public": true
 }
