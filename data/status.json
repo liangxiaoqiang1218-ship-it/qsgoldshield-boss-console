@@ -1,11 +1,11 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 C M8",
-  "updated_at": "2026-07-09T01:16:48Z",
-  "source_updated_at": "2026-07-09T01:16:48Z",
-  "generated_at": "2026-07-09T01:16:48Z",
-  "overall": "黄灯推进",
+  "release_version": "V6.1 patch plus GS147 C M9",
+  "updated_at": "2026-07-09T01:18:51Z",
+  "source_updated_at": "2026-07-09T01:18:51Z",
+  "generated_at": "2026-07-09T01:18:51Z",
+  "overall": "黄灯验证完成",
   "runtime": "PASS",
   "trade": "未开放",
   "safety": "安全",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "m8_done",
+  "freshness_label": "m9_validated_keep_locked",
   "status_level": "yellow",
-  "status_label": "m8_correction_plan_done",
-  "status_reason": "M8 correction plan completed: baseline truth, sample separation, lifecycle quarantine, performance acceptance, and gate attribution row-level design are planned. Keep locked and move to M9 readonly validation.",
+  "status_label": "m9_validated_keep_locked",
+  "status_reason": "M9 readonly validation completed: M8 rules are valid as a plan, but current evidence does not pass promotion. Keep locked and prepare C-pack close summary/backlog.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -25,21 +25,21 @@
   "running_workflow_count": 0,
   "owner_decision_needed": false,
   "current_package": "C",
-  "current_stage": "M9_PREP",
-  "next_action": "Run M9 readonly forward validation plan: validate baseline rule, sample separation, lifecycle quarantine, performance acceptance flags, and row-level gate attribution outputs.",
+  "current_stage": "C_PACK_CLOSE_PREP",
+  "next_action": "Prepare C-pack close summary and implementation backlog: baseline truth, lifecycle quarantine, performance acceptance flags, row-level gate attribution.",
   "next_focus": [
-    "M9 readonly forward validation",
-    "baseline rule validation",
-    "sample separation validation",
-    "lifecycle quarantine validation",
-    "performance acceptance flag validation",
-    "row-level gate attribution validation"
+    "C-pack close summary",
+    "implementation backlog",
+    "baseline truth reconstruction",
+    "lifecycle quarantine implementation",
+    "performance acceptance flags",
+    "row-level gate attribution"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
-    "stage promotion is not supported by current review result",
-    "M8 correction plan does not unlock trading"
+    "M9 validation does not support promotion",
+    "M9 validation does not unlock trading"
   ],
   "safe_public": true
 }
