@@ -1,10 +1,10 @@
 {
   "project": "金盾老板看板",
   "project_name": "GoldShield Boss Console",
-  "release_version": "V6.1 patch plus GS147 C M7",
-  "updated_at": "2026-07-09T01:13:06Z",
-  "source_updated_at": "2026-07-09T01:13:06Z",
-  "generated_at": "2026-07-09T01:13:06Z",
+  "release_version": "V6.1 patch plus GS147 C M8",
+  "updated_at": "2026-07-09T01:16:48Z",
+  "source_updated_at": "2026-07-09T01:16:48Z",
+  "generated_at": "2026-07-09T01:16:48Z",
   "overall": "黄灯推进",
   "runtime": "PASS",
   "trade": "未开放",
@@ -13,10 +13,10 @@
   "workflow_state": "PASS",
   "sync_status": "SYNCED",
   "dashboard_state": "ONLINE",
-  "freshness_label": "m7_done",
+  "freshness_label": "m8_done",
   "status_level": "yellow",
-  "status_label": "m7_truth_audit_done",
-  "status_reason": "M7 truth audit completed: partial trusted evidence only; baseline/new-sample acceptance is not trusted. Keep locked and move to M8 correction plan.",
+  "status_label": "m8_correction_plan_done",
+  "status_reason": "M8 correction plan completed: baseline truth, sample separation, lifecycle quarantine, performance acceptance, and gate attribution row-level design are planned. Keep locked and move to M9 readonly validation.",
   "stale_after_minutes": 30,
   "auto_refresh_seconds": 60,
   "open_issue_count": 1,
@@ -25,21 +25,21 @@
   "running_workflow_count": 0,
   "owner_decision_needed": false,
   "current_package": "C",
-  "current_stage": "M8_PREP",
-  "next_action": "Run M8 evidence and rule correction plan readonly: fix baseline truth, sample acceptance, lifecycle quarantine, performance acceptance, and gate attribution output.",
+  "current_stage": "M9_PREP",
+  "next_action": "Run M9 readonly forward validation plan: validate baseline rule, sample separation, lifecycle quarantine, performance acceptance flags, and row-level gate attribution outputs.",
   "next_focus": [
-    "M8 evidence and rule correction plan",
-    "baseline truth correction",
-    "sample acceptance separation",
-    "lifecycle quarantine plan",
-    "performance acceptance review",
-    "gate attribution output"
+    "M9 readonly forward validation",
+    "baseline rule validation",
+    "sample separation validation",
+    "lifecycle quarantine validation",
+    "performance acceptance flag validation",
+    "row-level gate attribution validation"
   ],
   "warnings": [
     "public page reads safe summary only",
     "public files contain no sensitive data",
     "stage promotion is not supported by current review result",
-    "M7 truth audit does not unlock trading"
+    "M8 correction plan does not unlock trading"
   ],
   "safe_public": true
 }
